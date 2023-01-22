@@ -25,16 +25,12 @@
         <ul class="navigation-list navigation-user">
           <li class="navigation-user-item">
             <a class="navigation-user-link" href="#">
-              <span class="visually-hidden">
-                Поиск
-              </span>
+              <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-user-item">
             <a class="navigation-user-link" href="#">
-              <span class="visually-hidden">
-                Нравится
-              </span>
+              <span class="visually-hidden">Нравится</span>
             </a>
           </li>
           <li class="navigation-user-item">
@@ -45,10 +41,10 @@
         </ul>
       </nav>
     </header>
-
+<!-- Главная страница -->
     <main class="main-index">
       <h1 class="visually-hidden">Седона</h1>
-      <img class="logo2" src="#.svg" alt="Логотип сайта Седона">
+      <img class="logo2" src=".svg" alt="Логотип сайта Седона">
         <section class="advantages">
           <h2 class="advantages-title">Седона — небольшой городок в Аризоне,
             заслуживающий большего!</h2>
@@ -65,17 +61,17 @@
             </tr>
             <tr>
               <td>
-                <b class="advantages-table-title">Небольшая
+                <b class="advantages-table-item">Небольшая
                   площадь</b>
                 <p class="advantages-table-description">Все достопримечательности находятся очень близко</p>
               </td>
               <td>
-                <b class="advantages-table-title">Красивая
+                <b class="advantages-table-item">Красивая
                   дорога</b>
                 <p class="advantages-table-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </td>
               <td>
-                <b class="advantages-table-title">Мало
+                <b class="advantages-table-item">Мало
                   туристов</b>
                 <p class="advantages-table-description">Большинство едет в Гранд Каньон и толпится там</p>
               </td>
@@ -85,7 +81,7 @@
                 <img class="bridge" src="" alt="Мост дьявола">
               </td>
               <td>
-                <b class="advantages-table-title">Там есть
+                <b class="advantages-table-item">Там есть
                   мост дьявола</b>
                 <p class="advantages-table-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </td>
@@ -93,46 +89,84 @@
           </table>
         </section>
         <section class="serveces">
-          <h3 class="services-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h3>
-          <p class="services-title-list">Опытный персонал и качественное обслуживание!</p>
+          <h2 class="services-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+          <p class="services-description">Опытный персонал и качественное обслуживание!</p>
           <table class="advantages-table">
             <tr>
               <td>
-                <b class="services-name">Жилье</b>
-                <p class="services-item">Рекомендуем пожить в настоящем мотеле,
+                <b class="services-item">Жилье</b>
+                <p class="services-item-description">Рекомендуем пожить в настоящем мотеле,
                   всё как в кино!</p>
               </td>
               <td>
-                <b class="services-name">Еда</b>
-                <p class="services-item">Всегда заказывайте
+                <b class="services-item">Еда</b>
+                <p class="services-item-description">Всегда заказывайте
                   топовый фирменный бургер, вы не разочаруетесь!</p>
               </td>
               <td>
-                <b class="services-name">Сувениры</b>
-                <p class="services-item">Не только китайского,
+                <b class="services-item">Сувениры</b>
+                <p class="services-item-description">Не только китайского,
                   но и настоящего местного производства!</p>
               </td>
             </tr>
           </table>
         </section>
         <section>
-          <h4 class="advantages-title">Заинтересовались?</h4>
-          <p class="advantages-description">Укажите предполагаемые даты поездки,
+          <h2 class="booking-title">Заинтересовались?</h2>
+          <p class="booking-description">Укажите предполагаемые даты поездки,
             и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="button" type="button" href="#">
             <span class="visually-hidden">Поиск гостиницы в Седоне</span>
           </a>
         </section>
     </main>
-
-    <footer class="site-footer">
+<!-- Подвал сайта -->
+    <footer class="page-footer">
       <section>
-        <h4 class="footer-title">Подпишитесь на рассылку</h4>
-          <p class="footer-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="footer-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input type="text" placeholder="Ваш e-mail">
-            <button class="button" type="submit">Подписаться</button>
-        </form>
+        <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
+        <img class="newsletter-scenery" src="" alt="Пейзаж округи города Седона">
+          <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label for="newsletter-email"></label>
+            <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
+            <button class="button newsletter-button" type="submit">
+              <span class="visually-hidden">Подписаться</span>
+            </button>
+          </form>
+      </section>
+      <section>
+        <table>
+          <tr>
+            <td>
+              <p class="visually-hidden">Социальные сети</p>
+              <ul class="footer-social-list">
+                <li class="footer-social-item">
+                  <a class="button" href="#">
+                    <span class="visually-hidden">ВКонтакте</span>
+                  </a>
+                </li>
+                <li class="footer-social-item">
+                  <a class="button" href="#">
+                    <span class="visually-hidden">Телеграмм</span>
+                  </a>
+                </li>
+                <li class="footer-social-item">
+                  <a class="button" href="#">
+                    <span class="visually-hidden">YouTube</span>
+                  </a>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            </td>
+            <td>
+              <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+                <span class="visually-hidden">.html academy</span>
+              </a>
+            </td>
+          </tr>
+        </table>
       </section>
     </footer>
   </body>
