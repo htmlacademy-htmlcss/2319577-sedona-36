@@ -9,11 +9,11 @@
 <body>
   <!-- Голова страницы -->
   <header class="page-header">
+    <a aria-current="page">
+      <img class="page-header-logo" src="" width="140" height="70" alt="Логотип городка Седона">
+    </a>
     <!-- Добавим навигацию -->
     <nav class="navigation">
-      <a class="navigation-logo" href="index.html">
-        <img class="page-header-logo" width="140" height="70" alt="Логотип городка Седона" src="">
-      </a>
       <ul class="navigation-list">
         <li class="navigation-item">
           <a class="navigation-link-current" href="index.html">Главная</a>
@@ -44,8 +44,10 @@
   </header>
   <!-- Тело страницы -->
   <main class="main-index">
-    <h1 class="visually-hidden">Седона</h1>
-    <img class="logo" src="" alt="Добро пожаловать в великолепную Седону">
+    <section class="main-logo">
+      <h1 class="visually-hidden">Седона</h1>
+      <img class="logo" src="" alt="Добро пожаловать в великолепную Седону">
+    </section>
     <!-- Разбиваем страницу на секции -->
     <!-- Описание -->
     <section class="advantages">
@@ -102,10 +104,6 @@
         Седоне</p>
       <a class="button" href="hotels.html">Поиск гостиницы в Седоне</a>
     </section>
-  </main>
-  <!-- Подвал страницы -->
-  <footer class="page-footer">
-    <!-- Разбиваем "подвал" на секции -->
     <!-- Добавляем возможность подписки на новости -->
     <section class="newsletter">
       <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
@@ -118,6 +116,10 @@
         <button class="button newsletter-button" type="submit">Подписаться</button>
       </form>
     </section>
+  </main>
+  <!-- Подвал страницы -->
+  <footer class="page-footer">
+    <!-- Разбиваем "подвал" на секции -->
     <!-- Добавляем ссылки на социальные сети -->
     <section class="social-network">
       <p class="visually-hidden">Социальные сети</p>
