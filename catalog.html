@@ -9,20 +9,20 @@
   <body>
     <!-- Голова страницы -->
     <header class="page-header">
+      <a aria-current="page">
+        <img class="page-header-logo" src="./images/logo.svg" width="140" height="70" alt="Логотип городка Седона">
+      </a>
       <!-- Добавим навигацию -->
       <nav class="navigation">
-        <a class="navigation-logo" href="index.html">
-          <img class="page-header-logo" width="140" height="70" alt="Логотип городка Седона" src="">
-        </a>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link-current" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link-current" href="hotels.html">Гостиницы</a>
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
@@ -34,10 +34,11 @@
           <li class="navigation-user-item">
             <a class="navigation-user-link" href="#">
               <span class="visually-hidden">Нравится</span>
+              <span class="user">12</span>
             </a>
           </li>
           <li class="navigation-user-item">
-            <a class="button" href="hotels.html">ХОЧУ СЮДА!</a>
+            <a class="button" href="#">ХОЧУ СЮДА!</a>
           </li>
         </ul>
       </nav>
@@ -47,6 +48,7 @@
     <main class="main-inner">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
+        <img class="logo" src="./images/filter.jpg" width="1200" height="Hug" alt="Фон гор окресностей Седоны">
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="visually-hidden" href="index.html">Главная</a>
@@ -116,7 +118,10 @@
           <button class="button-show" type="submit">Показать</button>
           <button class="button-reset" type="reset">Сбросить</button>
         </form>
-        <h2 class="catalog-title">Найдено гостиниц: 38</h2>
+        <p class="search">
+          Найдено гостиниц:
+          <span class="search-result">38</span>
+        </p>
         <!-- Добавим раскрывающийся список выбора -->
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Сначала популярные</option>
@@ -137,11 +142,11 @@
         <ul class="hotel-list">
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="" alt="Курортный отель и спа-центр Amara">
+              <img class="hotel-card-image" src="./images/hotels/hotel-1.jpg" alt="Курортный отель и спа-центр Amara">
               <h3 class="hotel-card-title">Amara Resort &amp; Spa</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
-            <span class="hotel-card-price">От 4000 ₽</span>
+            <span class="hotel-card-price">От 4000 ₽</span><br>
             <a class="hotel-card-button button" href="#">Подробнее</a>
             <a class="hotel-card-button button-link" href="#">В избранное</a>
             <p class="hotel-ratings stars-4">
@@ -151,11 +156,11 @@
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="" alt="Виллы в Poco Diablo">
+              <img class="hotel-card-image" src="./images/hotels/hotel-2.jpg" alt="Виллы в Poco Diablo">
               <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
-            <span class="hotel-card-price">От 5000 ₽</span>
+            <span class="hotel-card-price">От 5000 ₽</span><br>
             <a class="hotel-card-button button" href="#">Подробнее</a>
             <a class="hotel-card-button button-link-current" href="#">В избранном</a>
             <p class="hotel-ratings stars-4">
@@ -165,11 +170,11 @@
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="" alt="Гостиница Пустынный перепел">
+              <img class="hotel-card-image" src="./images/hotels/hotel-3.jpg" alt="Гостиница Пустынный перепел">
               <h3 class="hotel-card-title">Desert Quail Inn</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
-            <span class="hotel-card-price">От 2500 ₽</span>
+            <span class="hotel-card-price">От 2500 ₽</span><br>
             <a class="hotel-card-button button" href="#">Подробнее</a>
             <a class="hotel-card-button button-link" href="#">В избранное</a>
             <p class="hotel-ratings stars-3">
@@ -179,11 +184,11 @@
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="" alt="Гостиница Зеленое дерево">
+              <img class="hotel-card-image" src="./images/hotels/hotel-4.jpg" alt="Гостиница Зеленое дерево">
               <h3 class="hotel-card-title">GreenTree Inn</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
-            <span class="hotel-card-price">От 1500 ₽</span>
+            <span class="hotel-card-price">От 1500 ₽</span><br>
             <a class="hotel-card-button button" href="#">Подробнее</a>
             <a class="hotel-card-button button-link" href="#">В избранное</a>
             <p class="hotel-ratings stars-2">
@@ -214,14 +219,9 @@
           </li>
         </ul>
       </section>
-    </main>
-    <!-- Подвал страницы -->
-    <footer class="page-footer">
-      <!-- Разбиваем "подвал" на секции -->
       <!-- Добавляем возможность подписки на новости -->
       <section class="newsletter">
-        <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-        <img class="newsletter-scenery" src="" alt="Пейзаж округи города Седона">
+        <h2 class="newsletter-title-catalog">Подпишитесь на рассылку</h2>
         <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="newsletter-email"></label>
@@ -230,6 +230,10 @@
           <button class="button newsletter-button" type="submit">Подписаться</button>
         </form>
       </section>
+    </main>
+    <!-- Подвал страницы -->
+    <footer class="page-footer">
+      <!-- Разбиваем "подвал" на секции -->
       <!-- Добавляем ссылки на социальные сети -->
       <section class="social-network">
         <p class="visually-hidden">Социальные сети</p>
