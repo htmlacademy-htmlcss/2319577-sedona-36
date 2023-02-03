@@ -20,13 +20,18 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  background-color: lightgray;
+  background-color: #F2F2F2;
+  margin: 0;
 }
 
-/* Навигация */
-.page-header {
-  color: #000000;
+/* Выравнивание проекта по центру */
+.wrapper {
+  width: 1200px;
+  margin: auto;
   background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .navigation-link {
@@ -35,32 +40,57 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: #000000;
-  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
   text-decoration: none;
+}
 
+.search {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  background-image: url("../images/icons/search.svg");
+}
+
+.favourites {
+  width: 18px;
+  height: 17px;
+  align-items: center;
+  background-image: url("../images/icons/like.svg");
+}
+
+/* Скрытый текст */
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
+/* Тело страницы */
+.main-index {
+  color: #000000;
+  text-align: center;
+  width: 1200px;
+  margin: auto;
 }
 
 /* Приветствие */
 .hero {
   background-image: url("../images/index-background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 1200px;
-  height: 485px;
+  background-color: #F2F2F2;
+  background-size: cover;
+  min-height: 485px;
 }
 
-/* .logo-text {
-  position: center;
-} */
-
-.main-index {
-  color: #000000;
-  background-color: lightgray;
-  text-align: center;
-}
-
-/* Заголовок */
+/* Заголовки */
 .advantages-title,
 .services-title,
 .booking-title,
@@ -130,8 +160,9 @@ body {
   background-image: url("../images/subscribe.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 1200px;
-  height: 415px;
+  background-color: #F2F2F2;
+  background-size: cover;
+  min-height: 415px;
 }
 
 .field {
@@ -146,6 +177,7 @@ body {
   height: 52px;
   color: #ffffff;
   background-color: #82B3D3;
+  border: none;
 }
 
 /* Подвал сайта */
