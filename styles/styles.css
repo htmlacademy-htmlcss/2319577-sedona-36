@@ -152,17 +152,28 @@ body {
 .button {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  padding-left: 50px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-right: 50px;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 34px;
+  box-sizing: border-box;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  width: 160px;
+  height: 36px;
   color: #ffffff;
   background-color: #756157;
   border-radius: 4px;
+  border: 0;
+}
+
+/* Кнопка поиска гостиниц */
+.hotel-search {
+  font-size: 20px;
+  line-height: 36px;
+  padding: 8px 50px;
+  width: 376px;
+  height: 52px;
 }
 
 /* Подписка */
@@ -203,11 +214,13 @@ body {
   color: #000000;
 }
 
+/* Кнопка подписаться */
 .newsletter-button {
+  padding: 8px 50px;
+  width: 232px;
+  height: 52px;
   border-radius: 0 4px 4px 0;
-  border: 0;
   background-color: #82B3D3;
-  color: #ffffff;
 }
 
 /* Социальные сети */
@@ -305,35 +318,15 @@ body {
 
 /* Кнопка Применить и Сбросить */
 .button-show {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 4px;
-  border: 0;
-  color: #ffffff;
-  background-color: #82B3D3;
-  background-size: cover;
   padding: 8px 50px;
+  width: 191px;
+  background-color: #82B3D3;
 }
 
 .button-reset {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 4px;
-  border: 0;
-  color: #ffffff;
+  padding: 8px 50px;
+  width: 191px;
   background-color: #82b2d300;
-  background-size: cover;
-  padding: 8px 58px;
 }
 
 /* Сортировка */
@@ -419,18 +412,20 @@ body {
 }
 
 .button-about {
-  background-color: #756157;
+  width: 140px;
   padding: 8px 26px;
 }
 
-.button-link {
-  background-color: #82B3D3;
+.button-to-favorites {
+  width: 140px;
   padding: 8px 20px;
+  background-color: #82B3D3;
 }
 
-.button-link-current {
-  background-color: #7DB54F;
+.button-favorites {
+  width: 140px;
   padding: 8px 18px;
+  background-color: #7DB54F;
 }
 
 /* Звёздность жилья */
@@ -482,19 +477,20 @@ body {
 
 /* Переход по страницам */
 .pagination-link {
-  font-weight: 700;
   font-size: 20px;
-  line-height: 26px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 12px 23px;
-  border-radius: 4px;
-  color: #ffffff;
+  line-height: 36px;
+  padding: 12px 24px;
+  width: 60px;
+  height: 60px;
   background-color: #82B3D3;
 }
 
 .pagination-current {
+  font-size: 20px;
+  line-height: 36px;
+  padding: 12px 24px;
+  width: 60px;
+  height: 60px;
   color: #000000;
   background-color: #F2F2F2;
 }
