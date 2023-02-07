@@ -21,7 +21,6 @@ body {
   line-height: 21px;
   color: #000000;
   background-color: #F2F2F2;
-  margin: 0;
 }
 
 /* Выравнивание проекта по центру */
@@ -35,9 +34,20 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Убирает символ перед списками */
+.navigation-list,
+.advantages-list,
+.services-list,
+.footer-social-list,
+.breadcrumbs,
+.catalog-filter-list,
+.hotel-list,
+.pagination {
+  list-style: none; 
+}
+
 /* Навигация */
 .navigation-link {
-  /* font-family: "PT Sans", sans-serif; */
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -98,7 +108,6 @@ body {
 .services-title,
 .booking-title,
 .newsletter-title {
-  /* font-family: "PT Sans", sans-serif; */
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -108,7 +117,6 @@ body {
 /* Список */
 .advantages-item,
 .services-item {
-  /* font-family: "PT Sans", sans-serif; */
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -120,7 +128,6 @@ body {
 .services-description-section,
 .booking-description,
 .newsletter-description {
-  /* font-family: "PT Sans", sans-serif; */
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -244,7 +251,6 @@ body {
 
 /* Контактный телефон */
 .contacts-phone {
-  /* font-family: "PT Sans", sans-serif; */
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
@@ -284,7 +290,6 @@ body {
 
 /* Древо переходов */
 .breadcrumbs {
-  /* font-family: "PT Sans", sans-serif; */
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
