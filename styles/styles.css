@@ -15,7 +15,17 @@
   font-display: swap;
 }
 
+/* Размер страницы равен размеру окна браузера */
+html {
+  height: 100%;
+}
+
+/* Стиль для тела страницы */
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* Размер блока на всю страницу */
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -28,10 +38,29 @@ body {
   width: 1200px;
   max-width: 100%;
   margin: auto;
-  background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Сетка навигации */
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto; /* Блок по центру */
+}
+
+.navigation-list {
+  width: 630px;
+  /* Сброс отступов: */
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  max-width: 320px;
+  margin-left: auto;
 }
 
 /* Убирает символ перед списками */
@@ -43,7 +72,7 @@ body {
 .catalog-filter-list,
 .hotel-list,
 .pagination {
-  list-style: none; 
+  list-style: none;
 }
 
 /* Навигация */
@@ -87,12 +116,29 @@ body {
 } */
 
 /* Тело страницы */
+/* Растягивает блок main на все свободное пространство */
+.main-container {
+  flex-grow: 1;
+}
+
 .main-index {
   color: #000000;
-  text-align: center;
+  text-align: center; /* Весь текст по центру */
   width: 1200px;
   margin: auto;
   list-style: none;
+}
+
+/* Ширина содержимого на всю страницу */
+.page-container {
+  width: 100%;
+  margin: 0 auto; /* Блок по центру */
+}
+
+/* Центрирование надписи добро пожаловать.. */
+.logo-text {
+  display: block;
+  margin: 0 auto; /* Блок по центру */
 }
 
 /* Приветствие */
@@ -114,6 +160,16 @@ body {
   text-transform: uppercase;
 }
 
+/* Сетка блоков содержимого */
+.advantages-list,
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
 /* Список */
 .advantages-item,
 .services-item {
@@ -121,6 +177,7 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+
 }
 
 /* Описание */
@@ -143,6 +200,20 @@ body {
   color: #ffffff;
 }
 
+/* Ширина и высота блоков преимуществ*/
+.advantages-dark-blue,
+.advantages-light-blue,
+.advantages-blue,
+.advantages-white {
+  width: 400px;
+  height: 385px;
+}
+
+.block-content {
+  width: 230px;
+  margin: 0 auto;
+}
+
 .advantages-dark-blue {
   background-color: rgba(130, 179, 211, 1);
 }
@@ -153,6 +224,10 @@ body {
 
 .advantages-blue {
   background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-white {
+  background-color: #ffffff;
 }
 
 /* Кнопка */
@@ -206,6 +281,7 @@ body {
   line-height: 26px;
 }
 
+/* Поле ввода e-mail адреса для подписки */
 .field {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
@@ -301,6 +377,12 @@ body {
   background-repeat: no-repeat;
   text-decoration: none;
   color: inherit;
+}
+
+.breadcrumbs-transition {
+  background-image: url("../images/icons/breadcrumbs.svg");
+  background-repeat: no-repeat;
+  text-decoration: none;
 }
 
 .catalog-filter-title {
@@ -507,4 +589,9 @@ body {
   background-size: cover;
   background-color: #ffffff;
   min-height: 415px;
+}
+
+/* Сетки страниц */
+.page-header {
+  display: flex;
 }
