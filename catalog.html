@@ -1,55 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="styles/styles.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
 
-  <body>
-    <div class="wrapper">
-      <!-- Голова страницы -->
-      <header class="page-header">
-        <a aria-current="page">
-          <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип городка Седона">
-        </a>
-        <!-- Добавим навигацию -->
-        <nav class="navigation">
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a class="navigation-link link-current" href="index.html">Главная</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">О Седоне</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">Гостиницы</a>
-            </li>
-          </ul>
-          <ul class="navigation-list navigation-user">
-            <li class="navigation-user-item">
-              <a class="navigation-link search" href="#">
-                <span class="visually-hidden">Поиск</span>
-              </a>
-            </li>
-            <li class="navigation-user-item">
-              <a class="navigation-link favourites" href="#">
-                <span class="visually-hidden">Избранное</span>
-                <span class="user">12</span>
-              </a>
-            </li>
-            <li class="navigation-user-item">
-              <a class="button" href="#">ХОЧУ СЮДА!</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+<body>
+  <div class="wrapper">
+    <!-- Голова страницы -->
+    <header class="page-header">
+      <a aria-current="page">
+        <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип городка Седона">
+      </a>
+      <!-- Добавим навигацию -->
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link link-current" href="index.html">Главная</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">О Седоне</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+        <ul class="navigation-list navigation-user">
+          <li class="navigation-user-item">
+            <a class="navigation-link search" href="#">
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </li>
+          <li class="navigation-user-item">
+            <a class="navigation-link favourites" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="user">12</span>
+            </a>
+          </li>
+          <li class="navigation-user-item">
+            <a class="button" href="#">ХОЧУ СЮДА!</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <!-- Тело страницы -->
-      <main class="main-inner">
-        <!-- Разметка для секции фильтрации -->
-        <!-- Заголовок и хлебные крошки -->
+    <!-- Тело страницы -->
+    <main class="main-container main-inner">
+      <!-- Разметка для секции фильтрации -->
+      <!-- Заголовок и хлебные крошки -->
+      <div class="page-container">
         <div class="main-filters">
           <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -58,7 +59,9 @@
               <li class="breadcrumbs-item">
                 <a class="visually-hidden" href="index.html">Главная</a>
               </li>
-              &gt; <!-- Иконка > древа переходов -->
+              <li class="breadcrumbs-item">
+                <span class="visually-hidden breadcrumbs-transition">Переход</span>
+              </li>
               <li class="breadcrumbs-item">
                 <span class="breadcrumbs-link">Гостиницы</span>
               </li>
@@ -222,7 +225,7 @@
               <a class="button pagination-link" href="#">4</a>
             </li>
             <li class="pagination-item">
-              <a class="button pagination-link" href="#">...</a>
+              <span class="pagination-space" href="#">...</span>
             </li>
             <li class="pagination-item">
               <a class="button pagination-link" href="#">10</a>
@@ -240,43 +243,44 @@
             <button class="button newsletter-button" type="submit">Подписаться</button>
           </form>
         </section>
-      </main>
-      <!-- Подвал страницы -->
-      <footer class="page-footer">
-        <!-- Разбиваем "подвал" на секции -->
-        <!-- Добавляем ссылки на социальные сети -->
-        <section class="social-network">
-          <p class="visually-hidden">Социальные сети</p>
-          <ul class="footer-social-list">
-            <li class="footer-social-item">
-              <a class="social-vk" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Мы в ВКонтакте</span>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="social-tme" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Мы в телеграмм</span>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="social-youtube" href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">Мы в YouTube</span>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <!-- Добавляем контактный телефон -->
-        <section class="contacts">
-          <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        </section>
-        <!-- Добавляем ссылку на сайт HTML Академии -->
-        <section class="author">
-          <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-            <span class="visually-hidden">Сайт написан студентом HTML Академии</span>
-          </a>
-        </section>
-      </footer>
-    </div>
-  </body>
+      </div>
+    </main>
+    <!-- Подвал страницы -->
+    <footer class="page-footer">
+      <!-- Разбиваем "подвал" на секции -->
+      <!-- Добавляем ссылки на социальные сети -->
+      <section class="social-network">
+        <p class="visually-hidden">Социальные сети</p>
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a class="social-vk" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Мы в ВКонтакте</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="social-tme" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Мы в телеграмм</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="social-youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Мы в YouTube</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- Добавляем контактный телефон -->
+      <section class="contacts">
+        <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      </section>
+      <!-- Добавляем ссылку на сайт HTML Академии -->
+      <section class="author">
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+          <span class="visually-hidden">Сайт написан студентом HTML Академии</span>
+        </a>
+      </section>
+    </footer>
+  </div>
+</body>
 
 </html>
