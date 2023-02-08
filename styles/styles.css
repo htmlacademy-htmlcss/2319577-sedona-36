@@ -53,6 +53,12 @@ body {
   margin: 0 auto;
 }
 
+.navigation-logo {
+  width: 140px;
+  margin-left: 70px;
+  margin-right: 44px;
+}
+
 .navigation-list {
   width: 339px;
   /* Сброс отступов: */
@@ -398,12 +404,49 @@ body {
   background-color: #82B3D3;
   color: #ffffff;
   min-height: 412px;
+  padding: 70px;
+  padding-top: 35px;
+}
+
+/* Отступы для секции каталога гостиниц */
+.catalog-hotels {
+  margin: 70px;
+}
+
+/* Сетка расположения гостиниц */
+.hotel-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+/* Оформление карточки отеля */
+.hotel-card {
+  width: 340px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Переход по страницам */
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 1060px;
+  margin-left: 0;
+  margin-right: 660px;
+  padding: 0;
 }
 
 /* Заголовок фильтра поиска */
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
 }
 
 /* Древо переходов */
