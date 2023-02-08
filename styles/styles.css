@@ -25,12 +25,13 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100%; /* Размер блока на всю страницу */
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #F2F2F2;
+  /* Размер блока на всю страницу */
+  min-height: 100%;
 }
 
 /* Выравнивание проекта по центру */
@@ -48,19 +49,39 @@ body {
 .navigation {
   display: flex;
   width: 1200px;
-  margin: 0 auto; /* Блок по центру */
+  /* Блок по центру */
+  margin: 0 auto;
 }
 
 .navigation-list {
-  width: 630px;
+  width: 339px;
   /* Сброс отступов: */
   margin: 0;
   padding: 0;
 }
 
 .navigation-user {
-  max-width: 320px;
+  max-width: 268px;
   margin-left: auto;
+}
+
+/* Кнопка */
+.button {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 34px;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 160px;
+  height: 36px;
+  color: #ffffff;
+  background-color: #756157;
+  border-radius: 4px;
+  border: 0;
 }
 
 /* Убирает символ перед списками */
@@ -123,22 +144,25 @@ body {
 
 .main-index {
   color: #000000;
-  text-align: center; /* Весь текст по центру */
   width: 1200px;
   margin: auto;
   list-style: none;
+  /* Весь текст по центру */
+  text-align: center;
 }
 
 /* Ширина содержимого на всю страницу */
 .page-container {
   width: 100%;
-  margin: 0 auto; /* Блок по центру */
+  /* Блок по центру */
+  margin: 0 auto;
 }
 
 /* Центрирование надписи добро пожаловать.. */
-.logo-text {
+.text-logo {
   display: block;
-  margin: 0 auto; /* Блок по центру */
+  /* Блок по центру */
+  margin: 0 auto;
 }
 
 /* Приветствие */
@@ -158,6 +182,12 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+}
+
+/* Ограничение ширины для секции преимуществ*/
+.advantages-head {
+  width: 651px;
+  margin: 0 auto;
 }
 
 /* Сетка блоков содержимого */
@@ -183,8 +213,8 @@ body {
 /* Описание */
 .advantages-description-section,
 .services-description-section,
-.booking-description,
-.newsletter-description {
+.booking-description-section,
+.newsletter-description-section {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -230,23 +260,23 @@ body {
   background-color: #ffffff;
 }
 
-/* Кнопка */
-.button {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  padding: 8px 34px;
-  box-sizing: border-box;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  width: 160px;
-  height: 36px;
-  color: #ffffff;
-  background-color: #756157;
-  border-radius: 4px;
-  border: 0;
+.advantages-real-town,
+.advantages-devil-bridge {
+  background-color: rgba(130, 179, 211, 1);
+  background-size: cover;
+  min-height: 385px;
+}
+
+/* Ограничение ширины для секции сервиса*/
+.services-head {
+  width: 505px;
+  margin: 0 auto;
+}
+
+/* Ограничение ширины для секции подписки*/
+.booking-head {
+  width: 592px;
+  margin: 0 auto;
 }
 
 /* Кнопка поиска гостиниц */
@@ -268,17 +298,10 @@ body {
   min-height: 415px;
 }
 
-.newsletter-title-catalog {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
-}
-
-.newsletter-description {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+/* Ограничение ширины для секции подписки*/
+.newsletter-head {
+  width: 475px;
+  margin: 0 auto;
 }
 
 /* Поле ввода e-mail адреса для подписки */
@@ -306,7 +329,20 @@ body {
   background-color: #82B3D3;
 }
 
+/* Сетка подвала сайта */
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* Социальные сети */
+.footer-social {
+  width: 145px;
+  margin-left: 70px;
+  margin-right: 237px;
+}
+
 .social-vk {
   background-image: url("../images/icons/social-vk.svg");
   background-repeat: no-repeat;
@@ -337,6 +373,12 @@ body {
 }
 
 /* HTML Academy */
+.author {
+  margin-left: auto;
+  margin-right: 70px;
+  max-width: 115px;
+}
+
 .page-footer .htmlacademy-link {
   background-image: url("../images/logo-html-academy.svg");
   background-repeat: no-repeat;
