@@ -49,25 +49,29 @@ body {
 .navigation {
   display: flex;
   width: 1200px;
-  /* Блок по центру */
+  min-height: 64px;
   margin: 0 auto;
 }
 
 .navigation-logo {
   width: 140px;
   margin-left: 70px;
-  margin-right: 44px;
 }
 
 .navigation-list {
-  width: 339px;
-  /* Сброс отступов: */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 550px;
   margin: 0;
-  padding: 0;
+  padding-left: 28px;
 }
 
 .navigation-user {
-  max-width: 268px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 300px;
   margin-left: auto;
 }
 
@@ -188,12 +192,17 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.advantages-title {
+  padding-bottom: 25px;
 }
 
 /* Ограничение ширины для секции преимуществ*/
 .advantages-head {
-  width: 651px;
-  margin: 0 auto;
+  padding: 69px 274px;
 }
 
 /* Сетка блоков содержимого */
@@ -213,7 +222,6 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-
 }
 
 /* Описание */
@@ -225,6 +233,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  margin: 0;
 }
 
 .advantages-description,
@@ -241,6 +250,8 @@ body {
 .advantages-light-blue,
 .advantages-blue,
 .advantages-white {
+  display: flex;
+  align-items: center;
   width: 400px;
   height: 385px;
 }
@@ -268,6 +279,7 @@ body {
 
 .advantages-real-town,
 .advantages-devil-bridge {
+  display: flex;
   background-color: rgba(130, 179, 211, 1);
   background-size: cover;
   min-height: 385px;
@@ -275,27 +287,31 @@ body {
 
 /* Ограничение ширины для секции сервиса*/
 .services-head {
-  width: 505px;
-  margin: 0 auto;
+  padding: 64px 347px;
 }
 
 /* Ограничение ширины для секции подписки*/
 .booking-head {
-  width: 592px;
-  margin: 0 auto;
+  padding: 96px 304px;
+}
+
+/* Отступ от текста описания до кнопки поиска гостиниц */
+.booking-description-section {
+  padding-bottom: 54px;
 }
 
 /* Кнопка поиска гостиниц */
 .hotel-search {
+  width: 376px;
+  height: 52px;
   font-size: 20px;
   line-height: 36px;
   padding: 8px 50px;
-  width: 376px;
-  height: 52px;
 }
 
 /* Подписка */
 .newsletter {
+  display: flex;
   background-image: url("../images/subscribe.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -306,8 +322,16 @@ body {
 
 /* Ограничение ширины для секции подписки*/
 .newsletter-head {
-  width: 475px;
-  margin: 0 auto;
+  padding: 96px 258px;
+}
+
+.newsletter-description-section {
+  padding-bottom: 54px;
+}
+
+/* Полее ввода E-mail и кнопка подписки в один ряд */
+.newsletter-form {
+  display: flex;
 }
 
 /* Поле ввода e-mail адреса для подписки */
@@ -316,21 +340,23 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  padding-left: 20px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding: 14px 20px;
   padding-right: 345px;
   border-radius: 4px 0 0 4px;
+  width: 452px;
+  box-sizing: border-box;
   border: 0;
+  margin: 0;
   background-color: #F2F2F2;
   color: #000000;
 }
 
 /* Кнопка подписаться */
 .newsletter-button {
-  padding: 8px 50px;
   width: 232px;
   height: 52px;
+  padding: 8px 50px;
+  box-sizing: border-box;
   border-radius: 0 4px 4px 0;
   background-color: #82B3D3;
 }
@@ -338,15 +364,20 @@ body {
 /* Сетка подвала сайта */
 .page-footer-container {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 1200px;
   margin: 0 auto;
 }
 
 /* Социальные сети */
-.footer-social {
-  width: 145px;
+.footer-social-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 200px;
   margin-left: 70px;
-  margin-right: 237px;
+  margin-right: 178px;
 }
 
 .social-vk {
@@ -676,7 +707,3 @@ body {
   min-height: 415px;
 }
 
-/* Сетки страниц */
-.page-header {
-  display: flex;
-}
