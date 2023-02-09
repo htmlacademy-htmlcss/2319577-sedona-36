@@ -70,6 +70,7 @@
             <div class="filter-group">
               <p class="visually-hidden" hidden>Список гостиниц с фильтрами</p>
               <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+
                 <!-- Добавим чекбокс и настроим атрибуты: -->
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -94,6 +95,7 @@
                     </li>
                   </ul>
                 </fieldset>
+
                 <!-- Добавим радиокнопки и настроим атрибуты: -->
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Тип Жилья:</legend>
@@ -118,39 +120,46 @@
                     </li>
                   </ul>
                 </fieldset>
+
                 <!-- Добавим фильтр стоимости -->
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                 </fieldset>
+
                 <!-- Добавим кнопки подтверждения -->
                 <button class="button button-show" type="submit">Применить</button>
                 <button class="button button-reset" type="reset">Сбросить</button>
               </form>
             </div>
           </section>
+
           <section class="catalog-hotels">
-            <!-- Результаты поиска -->
-            <h2 class="catalog-search">
-              Найдено гостиниц:
-              <span class="search-result">38</span>
-            </h2>
-            <!-- Добавим раскрывающийся список сортировки -->
             <div class="sorting-container">
+              <!-- Результаты поиска -->
+              <h2 class="catalog-search">
+                Найдено гостиниц:
+                <span class="search-result">38</span>
+              </h2>
+
+              <!-- Добавим раскрывающийся список сортировки -->
               <select class="select-control" aria-label="Сортировка">
                 <option value="popular">Сначала популярные</option>
                 <option value="cheap">Сначала дешёвые</option>
                 <option value="expensive">Сначала дорогие</option>
               </select>
+
               <!-- Добавим ссылки для смены вида карточек -->
-              <a class="button-frame view-tile" href="#">
-                <span class="visually-hidden">Показать карточки</span>
-              </a>
-              <a class="button-light view-detailed-description" href="#">
-                <span class="visually-hidden">Показать подробное описание</span>
-              </a>
-              <a class="button-light view-list" href="#">
-                <span class="visually-hidden">Показать списком</span>
-              </a>
+              <div class="display-as">
+                <a class="button-frame view-tile" href="#">
+                  <span class="visually-hidden">Показать карточки</span>
+                </a>
+                <a class="button-light view-detailed" href="#">
+                  <span class="visually-hidden">Показать подробное описание</span>
+                </a>
+                <a class="button-light view-list" href="#">
+                  <span class="visually-hidden">Показать списком</span>
+                </a>
+              </div>
             </div>
 
             <!-- Каталог -->
@@ -212,42 +221,44 @@
                 <p class="hotel-ratings">Рейтинг: 5,0</p>
               </li>
             </ul>
+
             <!-- Переход по страницам каталога -->
             <ul class="pagination">
               <li class="pagination-item">
-                <a class="button pagination-current">1</a>
+                <a class="pagination-link pagination-current">1</a>
               </li>
               <li class="pagination-item">
-                <a class="button pagination-link" href="#">2</a>
+                <a class="pagination-link" href="#">2</a>
               </li>
               <li class="pagination-item">
-                <a class="button pagination-link" href="#">3</a>
+                <a class="pagination-link" href="#">3</a>
               </li>
               <li class="pagination-item">
-                <a class="button pagination-link" href="#">4</a>
+                <a class="pagination-link" href="#">4</a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-space" href="#">...</a>
+                <a class="pagination-link pagination-space" href="#">...</a>
               </li>
               <li class="pagination-item">
-                <a class="button pagination-link" href="#">10</a>
+                <a class="pagination-link" href="#">10</a>
               </li>
             </ul>
           </section>
+
           <!-- Добавляем возможность подписки на новости -->
           <section class="newsletter-catalog">
             <div class="newsletter-head">
               <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-              <p class="newsletter-description-section">Только полезная информация и никакого спама, честное
+              <p class="newsletter-description-section">Только полезная информация и никакого спама,<br> честное
                 бойскаутское!
               </p>
+              <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+                <label for="newsletter-email"></label>
+                <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email"
+                  required>
+                <button class="button newsletter-button" type="submit">Подписаться</button>
+              </form>
             </div>
-            <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label for="newsletter-email"></label>
-              <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email"
-                required>
-              <button class="button newsletter-button" type="submit">Подписаться</button>
-            </form>
           </section>
         </div>
       </main>
@@ -258,7 +269,7 @@
           <!-- Разбиваем "подвал" на секции -->
           <!-- Добавляем ссылки на социальные сети -->
           <section class="footer-social">
-            <p class="visually-hidden">Социальные сети</p>
+            <p class="visually-hidden" hidden>Социальные сети</p>
             <ul class="footer-social-list">
               <li class="footer-social-item">
                 <a class="social-vk" href="https://vk.com/htmlacademy">
