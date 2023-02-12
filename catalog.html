@@ -28,18 +28,18 @@
             </li>
           </ul>
           <ul class="navigation-list navigation-user">
-            <li class="navigation-user-item">
+            <li class="navigation-item">
               <a class="navigation-link search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
-            <li class="navigation-user-item">
+            <li class="navigation-item">
               <a class="navigation-link favourites" href="#">
                 <span class="visually-hidden">Избранное</span>
                 <span class="in-favourites">12</span>
               </a>
             </li>
-            <li class="navigation-user-item">
+            <li class="navigation-item">
               <a class="button get-here" href="#">ХОЧУ СЮДА!</a>
             </li>
           </ul>
@@ -55,11 +55,11 @@
             <header class="inner-header">
               <h1 class="inner-header-title">Гостиницы Седоны</h1>
               <ul class="breadcrumbs">
-                <li class="breadcrumbs-item">
+                <li class="breadcrumbs-item breadcrumbs-go-home">
                   <a class="visually-hidden" href="index.html">Главная</a>
                 </li>
-                <li class="breadcrumbs-item">
-                  <span class="visually-hidden breadcrumbs-transition">Переход</span>
+                <li class="breadcrumbs-item breadcrumbs-transition">
+                  <span class="visually-hidden">Переход</span>
                 </li>
                 <li class="breadcrumbs-item">
                   <span class="breadcrumbs-link">Гостиницы</span>
@@ -72,68 +72,62 @@
               <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
 
                 <!-- Добавим чекбокс и настроим атрибуты: -->
-                <div class="infrastructure">
-                  <fieldset class="catalog-filter-group">
-                    <legend class="catalog-filter-title">Инфраструктура:</legend>
-                    <ul class="catalog-filter-list">
-                      <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="checkbox" name="swimming-pool" checked>
-                          Бассейн
-                        </label>
-                      </li>
-                      <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="checkbox" name="perking" checked>
-                          Парковка
-                        </label>
-                      </li>
-                      <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="checkbox" name="wi-fi">
-                          Wi-fi
-                        </label>
-                      </li>
-                    </ul>
-                  </fieldset>
-                </div>
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title infrastructure">Инфраструктура:</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="swimming-pool" checked>
+                        Бассейн
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="perking" checked>
+                        Парковка
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="wi-fi">
+                        Wi-fi
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
 
                 <!-- Добавим радиокнопки и настроим атрибуты: -->
-                <div class="housing-class">
-                  <fieldset class="catalog-filter-group">
-                    <legend class="catalog-filter-title">Тип Жилья:</legend>
-                    <ul class="catalog-filter-list">
-                      <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="radio" name="product-group" value="hotel" checked>
-                          Гостиница
-                        </label>
-                      </li>
-                      <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="radio" name="product-group" value="motel">
-                          Мотель
-                        </label>
-                      </li>
-                      <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="radio" name="product-group" value="apartments">
-                          Апартаменты
-                        </label>
-                      </li>
-                    </ul>
-                  </fieldset>
-                </div>
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title housing-type">Тип Жилья:</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="product-group" value="hotel" checked>
+                        Гостиница
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="product-group" value="motel">
+                        Мотель
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="product-group" value="apartments">
+                        Апартаменты
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
 
                 <!-- Добавим фильтр стоимости -->
-                <div class="cost">
-                  <fieldset class="catalog-filter-group">
-                    <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                  </fieldset>
-                </div>
+                <fieldset class="catalog-filter-group filter-cost">
+                  <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+                </fieldset>
 
                 <!-- Добавим кнопки подтверждения -->
-                <div class="submit-reset">
+                <div class="submit-buttons">
                   <button class="button button-show" type="submit">Применить</button>
                   <button class="button button-reset" type="reset">Сбросить</button>
                 </div>
@@ -152,7 +146,7 @@
               <!-- Добавим раскрывающийся список сортировки -->
               <select class="select-control" aria-label="Сортировка">
                 <option value="popular">Сначала популярные</option>
-                <option value="cheap">Сначала дешёвые</option>
+                <option value="cheap" selected>Сначала дешёвые</option>
                 <option value="expensive">Сначала дорогие</option>
               </select>
 
