@@ -54,9 +54,12 @@ body {
 
 .navigation-logo {
   display: flex;
+  position: relative;
   width: 140px;
   margin-left: 70px;
   margin-right: 28px;
+  /* Низ логотипа поверх изображения */
+  margin-bottom: -6px;
 }
 
 .navigation-list {
@@ -199,9 +202,11 @@ body {
 
 /* Приветствие */
 .hero {
-  background-image: url("../images/index-background.jpg");
+  background-image: url("../images/divider.svg"), url("../images/index-background.jpg");
   background-color: #F2F2F2;
-  background-size: cover;
+  background-position: bottom, center;
+  background-repeat: no-repeat;
+  background-size: auto;
   min-height: 485px;
 }
 
@@ -516,9 +521,10 @@ body {
   min-height: 21px;
   padding: 0;
   margin: 0;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
   color: #ffffff;
   text-decoration: none;
+  background-color: #7DB54F;
 }
 
 /* Значки внутри древа переходов */
@@ -561,7 +567,7 @@ body {
 /* Выстраивание блоков фильтров в ряд */
 .filter-group {
   width: 1060px;
-  min-height: 160px;
+  min-height: 157px;
   padding: 0;
   margin: 0;
 }
@@ -571,7 +577,7 @@ body {
 }
 
 .catalog-filter-group {
-  width: 160px;
+  width: 150px;
   padding: 0;
   margin: 0;
   margin-right: 70px;
@@ -590,20 +596,16 @@ body {
   padding-bottom: 16px;
 }
 
-/* Инфраструктура */
-
-/* Тип жилья фильтр */
-
 /* Стоимость фильтр */
 .filter-cost {
   width: 290px;
+  margin-left: 70px;
 }
 
 /* Кнопка Применить и Сбросить */
 .submit-buttons {
-  min-width: 191px;
+  width: 191px;
   margin: 0;
-  margin-left: auto;
 }
 
 .button-show {
@@ -715,7 +717,7 @@ body {
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 /* Оформление карточки отеля */
@@ -724,6 +726,7 @@ body {
   border: 1px solid #E6E6E6;
   border-radius: 4px;
   padding: 20px;
+  margin-bottom: 20px;
   box-sizing: border-box;
 }
 
@@ -786,15 +789,19 @@ body {
 .hotel-stars-1 {
   width: 20px;
 }
+
 .hotel-stars-2 {
   width: 39px;
 }
+
 .hotel-stars-3 {
   width: 61px;
 }
+
 .hotel-stars-4 {
   width: 83px;
 }
+
 .hotel-stars-5 {
   width: 106px;
 }
