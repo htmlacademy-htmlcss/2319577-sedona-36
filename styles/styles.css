@@ -245,7 +245,8 @@ body {
 
 /* Список */
 .advantages-item,
-.services-item {
+.services-item,
+.hotel-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -717,31 +718,28 @@ body {
   padding: 50px 70px 0;
 }
 
-/* Сетка расположения гостиниц */
-.hotel-list {
+/* Сетка расположения гостиниц flex-ами */
+/* .hotel-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   padding: 0;
   padding-bottom: 20px;
-}
+} */
 
 /* Оформление карточки отеля */
-.hotel-card {
+/* .hotel-card {
   width: 340px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
   padding: 20px;
-  margin-bottom: 20px;
   box-sizing: border-box;
-}
+} */
 
-/* Каталог */
+/* Шрифты в карточках */
 .hotel-card-link {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
+  display: grid;
   text-decoration: none;
   color: #000000;
 }
@@ -751,6 +749,78 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+}
+
+/* Сетка расположения гостиниц grid-ами */
+.hotel-list {
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  grid-template-rows: repeat(2, 438px);
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 80px;
+}
+
+/* Оформление карточки отеля на grid-ах */
+.hotel-card {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 140px 20px 140px;
+  grid-template-rows: 212px 28px 21px 36px 36px;
+  row-gap: 16px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+}
+
+/* Расположение элементов по строкам и колонкам */
+.hotel-card-image {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
+
+.hotel-card-title {
+  width: 300px;
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  align-self: center;
+  text-transform: none;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.hotel-card-type {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.hotel-card-price {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  justify-self: end;
+}
+
+.button-about {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  margin: 0;
+}
+
+.button-to-favorites,
+.button-favorites {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
+
+.hotel-stars {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+  align-self: center;
+}
+
+.hotel-ratings {
+  grid-column: 3 / 4;
+  grid-row: 5 / 6;
 }
 
 /* Кнопки каталога */
@@ -786,6 +856,7 @@ body {
 /* Звёздность жилья */
 .hotel-stars {
   height: 18px;
+  margin: 0;
   /* Подключается иконка */
   background-image: url("../images/icons/star.svg");
   /* И повторяется с пространством между картинками */
@@ -824,6 +895,7 @@ body {
   width: 140px;
   height: 37px;
   padding: 8px 22px;
+  margin: 0;
   border-radius: 4px;
   color: #333333;
   background-color: #F2F2F2;
@@ -837,9 +909,8 @@ body {
   margin: 0;
   margin-left: 0;
   margin-right: auto;
-  padding: 0;
-  padding-top: 40px;
-  padding-bottom: 60px;
+  margin-bottom: 60px;
+  padding: 0;  
 }
 
 .pagination-link {
