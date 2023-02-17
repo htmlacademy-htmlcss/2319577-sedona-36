@@ -739,7 +739,6 @@ body {
 
 /* Шрифты в карточках */
 .hotel-card-link {
-  display: grid;
   text-decoration: none;
   color: #000000;
 }
@@ -755,7 +754,7 @@ body {
 .hotel-list {
   display: grid;
   grid-template-columns: 340px 340px 340px;
-  grid-template-rows: repeat(2, 438px);
+  grid-template-rows: repeat(2, min-content);
   gap: 20px;
   padding: 0;
   margin: 0;
@@ -767,7 +766,7 @@ body {
   display: grid;
   padding: 20px;
   grid-template-columns: 140px 20px 140px;
-  grid-template-rows: 212px 28px 21px 36px 36px;
+  grid-template-rows: 1fr min-content min-content min-content;
   row-gap: 16px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
@@ -777,50 +776,50 @@ body {
 .hotel-card-image {
   grid-column: 1 / 4;
   grid-row: 1 / 2;
+  margin-bottom: 16px;
 }
 
+/* Т.к. заголовок внутри ссылки, он считается одним элементом с картинкой для грида */
 .hotel-card-title {
   width: 300px;
   grid-column: 1 / 4;
-  grid-row: 2 / 3;
   align-self: center;
   text-transform: none;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin: 0;
 }
 
 .hotel-card-type {
   grid-column: 1 / 2;
-  grid-row: 3 / 4;
+  grid-row: 2 / 3;
 }
 
 .hotel-card-price {
   grid-column: 3 / 4;
-  grid-row: 3 / 4;
+  grid-row: 2 / 3;
   justify-self: end;
 }
 
 .button-about {
   grid-column: 1 / 2;
-  grid-row: 4 / 5;
+  grid-row: 3 / 4;
   margin: 0;
 }
 
 .button-to-favorites,
 .button-favorites {
   grid-column: 3 / 4;
-  grid-row: 4 / 5;
+  grid-row: 3 / 4;
 }
 
 .hotel-stars {
   grid-column: 1 / 2;
-  grid-row: 5 / 6;
+  grid-row: 4 / 5;
   align-self: center;
 }
 
 .hotel-ratings {
   grid-column: 3 / 4;
-  grid-row: 5 / 6;
+  grid-row: 4 / 5;
 }
 
 /* Кнопки каталога */
