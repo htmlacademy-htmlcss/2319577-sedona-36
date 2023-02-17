@@ -772,22 +772,19 @@ body {
   border-radius: 4px;
 }
 
-/* Расположение элементов по строкам и колонкам */
+/* Т.к. заголовок внутри ссылки, он считается одним элементом с картинкой для грида */
 .hotel-card-image {
-  grid-column: 1 / 4;
-  grid-row: 1 / 2;
   margin-bottom: 16px;
 }
 
-/* Т.к. заголовок внутри ссылки, он считается одним элементом с картинкой для грида */
 .hotel-card-title {
   width: 300px;
-  grid-column: 1 / 4;
   align-self: center;
   text-transform: none;
   margin: 0;
 }
 
+/* Расположение элементов по строкам и колонкам */
 .hotel-card-type {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
