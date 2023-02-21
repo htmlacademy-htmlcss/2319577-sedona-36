@@ -462,6 +462,15 @@ body {
   fill: #83B3D3;
 }
 
+.footer-social-link:hover .footer-icon,
+.footer-social-link:focus .footer-icon {
+  fill: #68A2CA;
+}
+
+.footer-social-link:active .footer-icon {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
 /* Контактный телефон */
 .contacts-phone {
   font-weight: 400;
@@ -475,10 +484,7 @@ body {
   color: #000000;
 }
 
-.contacts-phone:hover {
-  color: #756157;
-}
-
+.contacts-phone:hover,
 .contacts-phone:focus {
   color: #756157;
 }
@@ -509,10 +515,17 @@ body {
   bottom: 0;
   left: 0;
   margin: auto;
-  fill: #c3c3c3;
+  fill: #000000;
 }
 
+.author-link:hover .author-icon,
+.author-link:focus .author-icon {
+  fill: #756157;
+}
 
+.author-link:active .author-icon {
+  fill: rgba(117, 97, 87, 0.3);
+}
 
 /* СТИЛИЗАЦИЯ СТРАНИЦЫ КАТАЛОГА */
 /* Фильтр поиска */
@@ -536,7 +549,7 @@ body {
   line-height: 78px;
   padding: 0;
   margin: 0;
-  /* margin-bottom: 8px; */
+  margin-bottom: 8px;
 }
 
 /* Древо переходов */
@@ -548,30 +561,32 @@ body {
   line-height: 21px;
   min-height: 21px;
   padding: 0;
-  /* padding-top: 8px;
-  padding-bottom: 8px; */
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   color: #ffffff;
   text-decoration: none;
 }
 
 /* Значки внутри древа переходов */
-.breadcrumbs-go-home {
+.breadcrumbs-link .go-home{
   display: block;
-  width: 12px;
-  height: 12px;
-  padding: 8px 0;
-  margin: 0;
-  margin-right: 10px;
-  background-image: url("../images/icons/go-home.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  text-decoration: none;
+  color: #000000;
+}
+
+.breadcrumbs-link svg {
+  fill: #ffffff;
+}
+
+.breadcrumbs-link:hover svg,
+.breadcrumbs-link:active svg {
+  fill: rgba(255, 255, 255, 0.6);
 }
 
 .breadcrumbs-transition {
   width: 7px;
   height: 10px;
+  margin-left: 10px;
   margin-right: 10px;
   background-image: url("../images/icons/breadcrumbs.svg");
   background-repeat: no-repeat;
@@ -691,76 +706,57 @@ body {
 
 /* Выбора варианта отображения каталога  */
 .display-as {
+  position: relative;
   display: flex;
   width: 160px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.display-as a {
+.card-grid-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 48px;
   height: 48px;
   margin-right: 8px;
   text-decoration: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 2px solid #E5E5E5;
   color: #000000;
 }
 
 /* Убирает отступ у последнего элемента */
-.display-as a:last-child {
+.card-grid-toggle:last-child {
   margin-right: 0;
 }
 
-.select-frame {
-  border-radius: 4px;
+.card-grid-toggle svg {
+  position: absolute;
+  fill: #000000;
+}
+
+.card-grid-toggle-current {
   border: 2px solid #000000;
 }
 
-.select-light {
-  border-radius: 4px;
-  border: 2px solid #E5E5E5;
+.card-grid-toggle:hover {
+  border: 2px solid #000000;
 }
 
-.view-tile {
-  background-image: url("../images/icons/view-tile.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.card-grid-toggle:focus {
+  border: 2px solid #68A2CA;
 }
 
-.view-detailed {
-  background-image: url("../images/icons/view-detailed-description.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.view-list {
-  background-image: url("../images/icons/view-list.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.card-grid-toggle:active {
+  border: 2px solid #000000;
 }
 
 /* Отступы для секции каталога гостиниц */
 .catalog-hotels {
   padding: 50px 70px 0;
 }
-
-/* Сетка расположения гостиниц flex-ами */
-/* .hotel-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 20px;
-} */
-
-/* Оформление карточки отеля */
-/* .hotel-card {
-  width: 340px;
-  border: 1px solid #E6E6E6;
-  border-radius: 4px;
-  padding: 20px;
-  box-sizing: border-box;
-} */
 
 /* Шрифты в карточках */
 .hotel-card-link {
@@ -775,7 +771,7 @@ body {
   line-height: 21px;
 }
 
-/* Сетка расположения гостиниц grid-ами */
+/* Сетка расположения найденных гостиниц grid-ами */
 .hotel-list {
   display: grid;
   grid-template-columns: 340px 340px 340px;
@@ -931,7 +927,7 @@ body {
   margin-left: 0;
   margin-right: auto;
   margin-bottom: 60px;
-  padding: 0;  
+  padding: 0;
 }
 
 .pagination-link {
