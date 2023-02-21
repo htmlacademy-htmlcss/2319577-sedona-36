@@ -105,6 +105,7 @@ body {
 
 .favourites {
   display: block;
+  position: relative;
   width: 18px;
   height: 18px;
   padding: 23px 0;
@@ -112,14 +113,18 @@ body {
 }
 
 .in-favourites {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 11px;
   font-weight: 400;
   font-size: 10px;
   line-height: 10px;
   color: #FFFFFF;
-  position: absolute;
   width: 20px;
   height: 20px;
-  align-items: center;
   background-color: #7DB54F;
   border-radius: 10px;
 }
@@ -131,6 +136,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   padding: 8px 34px;
+  display: inline-block;
   box-sizing: border-box;
   text-align: center;
   text-transform: uppercase;
@@ -141,6 +147,7 @@ body {
   background-color: #756157;
   border-radius: 4px;
   border: 0;
+  cursor: pointer;
 }
 
 .get-here {
@@ -220,11 +227,11 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .advantages-title {
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 /* Ограничение ширины для секции преимуществ*/
@@ -251,6 +258,8 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 /* Описание */
@@ -268,6 +277,7 @@ body {
 .advantages-description,
 .services-description {
   color: #333333;
+  margin: 0;
 }
 
 .special {
@@ -297,6 +307,18 @@ body {
 /* Картинка первая в очереди отображения */
 .services-images {
   order: -1;
+}
+
+.home {
+  margin-bottom: 30px;
+}
+
+.food {
+  margin-bottom: 31px;
+}
+
+.souvenirs {
+  margin-bottom: 28px;
 }
 
 /* Расцветка заднего фона блоков */
@@ -336,7 +358,7 @@ body {
 
 /* Отступ от текста описания до кнопки поиска гостиниц */
 .booking-description-section {
-  padding-bottom: 54px;
+  margin-bottom: 54px;
 }
 
 /* Кнопка поиска гостиниц */
@@ -365,7 +387,7 @@ body {
 }
 
 .newsletter-description-section {
-  padding-bottom: 54px;
+  margin-bottom: 54px;
 }
 
 /* Полее ввода E-mail и кнопка подписки в один ряд */
@@ -415,49 +437,29 @@ body {
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
-  width: 200px;
+  width: 250px;
   padding: 0;
   margin: 0;
-  margin-right: auto;
+  margin-right: 130px;
 }
 
-.footer-social-item {
+.footer-social-link {
+  position: relative;
+  display: block;
   width: 47px;
   height: 40px;
   text-decoration: none;
   color: #000000;
 }
 
-/* Убирает отступ у последней иконки социальной сети */
-/* .footer-social-item:last-child {
-  margin-right: 0;
-} */
-
-.social-vk {
-  display: inline-block;
-  width: 47px;
-  height: 40px;
-  background-image: url("../images/icons/social-vk.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.social-tme {
-  display: inline-block;
-  width: 47px;
-  height: 40px;
-  background-image: url("../images/icons/social-telegram.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.social-youtube {
-  display: inline-block;
-  width: 47px;
-  height: 40px;
-  background-image: url("../images/icons/social-youtube.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.footer-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #83B3D3;
 }
 
 /* Контактный телефон */
@@ -465,12 +467,24 @@ body {
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: auto;
+  margin-right: 230px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+}
+
+.contacts-phone:hover {
+  color: #756157;
+}
+
+.contacts-phone:focus {
+  color: #756157;
+}
+
+.contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 /* HTML Academy */
@@ -479,14 +493,25 @@ body {
   max-width: 115px;
 }
 
-.page-footer .htmlacademy-link {
-  display: inline-block;
+.author-link {
+  position: relative;
+  display: block;
   width: 115px;
   height: 33px;
-  background-image: url("../images/logo-html-academy.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  text-decoration: none;
+  color: #000000;
 }
+
+.author-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #c3c3c3;
+}
+
 
 
 /* СТИЛИЗАЦИЯ СТРАНИЦЫ КАТАЛОГА */
