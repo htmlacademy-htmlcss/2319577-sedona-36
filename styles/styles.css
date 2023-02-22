@@ -73,6 +73,7 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   display: block;
   padding: 20px 16px;
   font-weight: 700;
@@ -81,18 +82,24 @@ body {
   text-align: center;
   color: #000000;
   text-decoration: none;
+  min-width: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  top: 64px;
+  width: 68px;
+  height: 2px;
+  background-color: rgba(117, 98, 87, 1);
+  content: "";
 }
 
 .navigation-user {
   max-width: 350px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.navigation-link {
-  min-width: 44px;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .search {
@@ -272,7 +279,27 @@ body {
   margin-bottom: 30px;
 }
 
-/* Описание */
+.advantages-item {
+  position: relative;
+  margin-bottom: 62px;
+}
+
+/* Псевдоэлемент после заголовка преимуществ */
+.advantages-item::before {
+  position: absolute;
+  top: 86px;
+  left: 85px;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  content: "";
+}
+
+.advantages-item.special::before {
+  background-color: rgba(255, 255, 255, 0.3);
+} 
+
+/* Текст описания */
 .advantages-description-section,
 .services-description-section,
 .booking-description-section,
@@ -309,12 +336,16 @@ body {
 .block-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 230px;
   margin: 0 auto;
 }
 
-/* Картинка первая в очереди отображения */
+/* Картинка в середине блока сервиса */
+.block-content .services-images {
+  align-self: center;
+}
+
+/* Картинка первая в очереди отображения блока сервиса */
 .services-images {
   order: -1;
 }
@@ -700,6 +731,7 @@ body {
 
 .button-reset:focus {
   outline: 3px solid #83B3D3;
+  outline-offset: -3px;
 }
 
 /* Блок Найдено, Сортировка, Вид отображения */
