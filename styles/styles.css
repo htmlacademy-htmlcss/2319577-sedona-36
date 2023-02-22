@@ -178,6 +178,7 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+  left: -10000px;
 }
 
 /* Тело страницы */
@@ -468,7 +469,7 @@ body {
 }
 
 .footer-social-link:active .footer-icon {
-  fill: rgba(104, 162, 202, 0.3);
+  opacity: 30%;
 }
 
 /* Контактный телефон */
@@ -490,7 +491,7 @@ body {
 }
 
 .contacts-phone:active {
-  color: rgba(117, 97, 87, 0.3);
+  opacity: 30%;
 }
 
 /* HTML Academy */
@@ -524,7 +525,7 @@ body {
 }
 
 .author-link:active .author-icon {
-  fill: rgba(117, 97, 87, 0.3);
+  opacity: 30%;
 }
 
 /* СТИЛИЗАЦИЯ СТРАНИЦЫ КАТАЛОГА */
@@ -567,29 +568,28 @@ body {
   text-decoration: none;
 }
 
-/* Значки внутри древа переходов */
-.breadcrumbs-link .go-home{
-  display: block;
-  text-decoration: none;
-  color: #000000;
-}
-
-.breadcrumbs-link svg {
-  fill: #ffffff;
-}
-
-.breadcrumbs-link:hover svg,
-.breadcrumbs-link:active svg {
-  fill: rgba(255, 255, 255, 0.6);
-}
-
-.breadcrumbs-transition {
-  width: 7px;
-  height: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+.breadcrumbs-item {
+  padding-right: 18px;
   background-image: url("../images/icons/breadcrumbs.svg");
   background-repeat: no-repeat;
+  background-position: right;
+  margin-right: 11px;
+}
+
+.breadcrumbs-item:last-child {
+  background-image: none;
+  margin-right: 0;
+}
+
+/* Значки внутри древа переходов */
+.breadcrumbs-link{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.breadcrumbs-link[href]:hover,
+.breadcrumbs-link[href]:active {
+  opacity: 30%;
 }
 
 /* Шрифты */
@@ -948,14 +948,23 @@ body {
   background-color: #82B3D3;
 }
 
+.pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
 /* Отступ справа у всех номеров страниц, кроме последнего элемента */
 .pagination-item:not(:last-child) {
   margin-right: 8px;
 }
 
-.pagination-current {
-  color: #000000;
-  background-color: #F2F2F2;
+.pagination-link:hover,
+.pagination-link:focus {
+  background-color: #68A2CA;
+}
+
+.pagination-link:active {
+  opacity: 30%;
 }
 
 .pagination-space {
