@@ -184,6 +184,10 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.button:disabled {
+  color: #E5E5E5;
+}
+
 /* Убирает символ перед списками */
 .navigation-list,
 .advantages-list,
@@ -451,6 +455,12 @@ body {
   margin-bottom: 54px;
 }
 
+/* Инпут занимает всё свободное место */
+.newsletter-email {
+  flex-grow: 1;
+  margin: 0;
+}
+
 /* Полее ввода E-mail и кнопка подписки в один ряд */
 .newsletter-form {
   display: flex;
@@ -463,7 +473,6 @@ body {
   font-size: 18px;
   line-height: 24px;
   padding: 14px 20px;
-  padding-right: 345px;
   border-radius: 4px 0 0 4px;
   width: 452px;
   box-sizing: border-box;
@@ -472,6 +481,28 @@ body {
   background-color: #F2F2F2;
   color: #000000;
 }
+
+/* Надпись в поле заполнения форм */
+.field::placeholder {
+  color: #000000;
+  opacity: 60%;
+}
+
+/* Текст введен не по образцу */
+/* не работает =\ */
+/* .field:focus:invalid {
+  border-color: #ee5656;
+} */
+
+.field:hover,
+.field:focus {
+  border: 2px solid #68A2CA;
+}
+
+/* Выделение рамки при вводе email */
+/* .field:??? {
+  border: 2px solid #3F5E72;
+} */
 
 /* Кнопка подписаться */
 .newsletter-subscribe {
@@ -787,6 +818,14 @@ body {
   border: 2px solid #68A2CA;
 }
 
+.select-control:focus-visible {
+  border: 2px solid #3F5E72;
+}
+
+.select-control:disabled {
+  opacity: 30%;
+}
+
 /* Выбора варианта отображения каталога  */
 .display-as {
   position: relative;
@@ -849,7 +888,8 @@ body {
 
 .hotel-card-link:hover,
 .hotel-card-link:focus {
-  color: #83B3D3;
+  color: #3F5E72;
+  text-decoration: underline;
 }
 
 .hotel-card-link:active {
