@@ -100,6 +100,7 @@ body {
 .navigation-link:hover,
 .navigation-link:focus {
   color: #756157;
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
 .navigation-link:active {
@@ -472,11 +473,11 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  padding: 14px 20px;
+  padding: 12px 20px;
   border-radius: 4px 0 0 4px;
   width: 452px;
+  border: 2px solid transparent;
   box-sizing: border-box;
-  border: 0;
   margin: 0;
   background-color: #F2F2F2;
   color: #000000;
@@ -489,20 +490,14 @@ body {
 }
 
 /* Текст введен не по образцу */
-/* не работает =\ */
 /* .field:focus:invalid {
-  border-color: #ee5656;
+  outline: 2px solid #ee5656;
 } */
 
 .field:hover,
 .field:focus {
   border: 2px solid #68A2CA;
 }
-
-/* Выделение рамки при вводе email */
-/* .field:??? {
-  border: 2px solid #3F5E72;
-} */
 
 /* Кнопка подписаться */
 .newsletter-subscribe {
@@ -766,8 +761,9 @@ body {
 }
 
 .button-reset {
-  padding: 8px 50px;
+  padding: 6px 50px;
   width: 191px;
+  border: 3px solid transparent;
   background-color: #82b2d300;
 }
 
@@ -1124,6 +1120,11 @@ body {
 
 .pagination-link:active {
   opacity: 30%;
+}
+
+.pagination-space:hover,
+.pagination-space:focus {
+  background-color: #F2F2F2;
 }
 
 /* Отступ справа у всех номеров страниц, кроме последнего элемента */
