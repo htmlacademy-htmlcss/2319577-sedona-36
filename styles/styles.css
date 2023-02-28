@@ -61,6 +61,15 @@ body {
   margin-bottom: -6px;
 }
 
+.navigation-logo:hover,
+.navigation-logo:focus {
+  opacity: 60%;
+}
+
+.navigation-logo:active {
+  opacity: 30%;
+}
+
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
@@ -186,7 +195,7 @@ body {
 }
 
 .button:disabled {
-  color: #E5E5E5;
+  background-color: #E5E5E5;
 }
 
 /* Убирает символ перед списками */
@@ -359,25 +368,25 @@ body {
 }
 
 /* Векторная картинка в блоке сервиса */
-.services-item::before{
+.services-item::before {
   display: block;
-  background-image: url('../images/icons/services-booking.svg');
+  background-image: url("../images/icons/services-booking.svg");
   background-repeat: no-repeat;
-  content:'';
+  content: '';
   width: 75px;
   height: 72px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
 
-.food::before{
-  background-image: url('../images/icons/services-food.svg');
+.food::before {
+  background-image: url("../images/icons/services-food.svg");
   width: 74px;
   height: 70px;
 }
 
-.souvenire::before{
-  background-image: url('../images/icons/services-souvenire.svg');
+.souvenire::before {
+  background-image: url("../images/icons/services-souvenire.svg");
   width: 64px;
   height: 76px;
 }
@@ -673,7 +682,7 @@ body {
 }
 
 /* Значки внутри древа переходов */
-.breadcrumbs-link{
+.breadcrumbs-link {
   text-decoration: none;
   color: #ffffff;
 }
@@ -720,6 +729,7 @@ body {
   padding: 0;
   margin: 0;
   margin-right: 70px;
+  border: none;
 }
 
 .catalog-filter-title {
@@ -735,10 +745,171 @@ body {
   padding-bottom: 16px;
 }
 
+/* Резервируем область для чекбокса */
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+/* Стилизация чекбокса */
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: transparent;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.control:hover .control-mark {
+  opacity: 60%;
+}
+
+.control:focus .control-mark {
+  outline: 3px solid #83B3D3;
+}
+
+.control:active .control-mark {
+  opacity: 30%;
+}
+
+/* Галочка внутри выбранного чекбокса */
+.control-input[type="checkbox"]:checked+.control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  background-image: url("../images/icons/checkbox-checked.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+/* Стилизация радио-кнопок */
+.control-input[type="radio"]+.control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked+.control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-image: url("../images/icons/radio-checked.svg");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  content: "";
+}
+
 /* Стоимость фильтр */
 .filter-cost {
   width: 290px;
   margin-left: 70px;
+}
+
+/* Оформление полей ввода диапазона цены */
+.range-wrapper-inputs {
+  display: flex;
+}
+
+.catalog-filter-label:last-child {
+  margin-left: 2px;
+}
+
+.range-input {
+  margin: 0;
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+  background-color: #F2F2F2;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  margin-bottom: 44px;
+}
+
+.range-input:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.range-input:active {
+  border: 2px solid #000000;
+  outline: none;
+}
+
+.range-input:disabled {
+  background-color: #E5E5E5;
+}
+
+.range-input::placeholder {
+  text-align: right;
+  font-weight: 400;
+  color: #000000;
+  opacity: 60%;
+}
+
+.catalog-filter-label:first-child .range-input {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.catalog-filter-label:last-child .range-input {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Основание полосы бегунков стоимости */
+.range-scale {
+  position: relative;
+  height: 0;
+  border-top: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Активная полоса диапазона стоимости */
+.range-bar {
+  position: absolute;
+  top: -4px;
+  height: 0;
+  border-top: 4px solid #FFFFFF;
+}
+
+/* Стилизация ползунков для изменения стоимости */
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:focus {
+  outline: 3px solid rgba(131, 179, 211, 1);
+}
+
+.range-toggle:active {
+  outline: 2px solid rgba(131, 179, 211, 1);
+}
+
+/* Позиционирование ползунков */
+.toggle-min {
+  top: -12px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -12px;
+  right: 0;
 }
 
 /* Кнопка Применить и Сбросить */
@@ -797,25 +968,27 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 50px;
-  width: 292px;
+  appearance: none;
+  width: 290px;
+  padding: 12px 20px;
+  padding-right: 40px;
   margin-left: auto;
   margin-right: 70px;
+  background-image: url("../images/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
   color: #333333;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
 
-.select-control:hover,
-.select-control:focus {
-  border: 2px solid #68A2CA;
+.select-control:hover {
+  border-color: #68A2CA;
 }
 
-.select-control:focus-visible {
-  border: 2px solid #3F5E72;
+.select-control:focus {
+  border-color: #3F5E72;
+  outline: none;
 }
 
 .select-control:disabled {
