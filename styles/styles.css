@@ -64,6 +64,7 @@ body {
 .navigation-logo:hover,
 .navigation-logo:focus {
   opacity: 60%;
+  outline: none;
 }
 
 .navigation-logo:active {
@@ -110,6 +111,7 @@ body {
 .navigation-link:focus {
   color: #756157;
   background-color: rgba(131, 179, 211, 0.2);
+  outline: none;
 }
 
 .navigation-link:active {
@@ -188,6 +190,7 @@ body {
 .get-here:hover,
 .get-here:focus {
   background-color: #615048;
+  outline: none;
 }
 
 .button:active {
@@ -443,6 +446,7 @@ body {
 .hotel-search:hover,
 .hotel-search:focus {
   background-color: #615048;
+  outline: none;
 }
 
 /* Подписка */
@@ -499,13 +503,19 @@ body {
 }
 
 /* Текст введен не по образцу */
-/* .field:focus:invalid {
-  outline: 2px solid #ee5656;
-} */
+.field:focus:invalid {
+  outline: 2px solid #f36565;
+  border: transparent;
+}
 
 .field:hover,
 .field:focus {
   border: 2px solid #68A2CA;
+  outline: none;
+}
+
+.field:disabled {
+  opacity: 30%;
 }
 
 /* Кнопка подписаться */
@@ -521,6 +531,7 @@ body {
 .newsletter-subscribe:hover,
 .newsletter-subscribe:focus {
   background-color: #68A2CA;
+  outline: none;
 }
 
 /* Сетка подвала сайта */
@@ -551,6 +562,10 @@ body {
   height: 40px;
   text-decoration: none;
   color: #000000;
+}
+
+.footer-social-link:focus {
+  outline: none;
 }
 
 .footer-icon {
@@ -588,6 +603,7 @@ body {
 .contacts-phone:hover,
 .contacts-phone:focus {
   color: #756157;
+  outline: none;
 }
 
 .contacts-phone:active {
@@ -607,6 +623,10 @@ body {
   height: 33px;
   text-decoration: none;
   color: #000000;
+}
+
+.author-link:focus {
+  outline: none;
 }
 
 .author-icon {
@@ -687,6 +707,11 @@ body {
   color: #ffffff;
 }
 
+.breadcrumbs-link:focus {
+  outline: none;
+  opacity: 60%;
+}
+
 .breadcrumbs-link[href]:hover,
 .breadcrumbs-link[href]:active {
   opacity: 30%;
@@ -764,15 +789,15 @@ body {
   background-color: #FFFFFF;
 }
 
-.control:hover .control-mark {
+.control-input:hover +.control-mark {
   opacity: 60%;
 }
 
-.control:focus .control-mark {
+.control-input:focus +.control-mark {
   outline: 3px solid #83B3D3;
 }
 
-.control:active .control-mark {
+.control-input:active +.control-mark {
   opacity: 30%;
 }
 
@@ -814,6 +839,11 @@ body {
 /* Оформление полей ввода диапазона цены */
 .range-wrapper-inputs {
   display: flex;
+  margin-bottom: 44px;
+}
+
+.catalog-filter-label {
+  position: relative;
 }
 
 .catalog-filter-label:last-child {
@@ -821,8 +851,9 @@ body {
 }
 
 .range-input {
-  margin: 0;
+  position: relative;
   padding: 12px 20px;
+  padding-right: 45px;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -830,7 +861,6 @@ body {
   background-color: #F2F2F2;
   border: 2px solid transparent;
   box-sizing: border-box;
-  margin-bottom: 44px;
 }
 
 .range-input:focus {
@@ -846,19 +876,23 @@ body {
   background-color: #E5E5E5;
 }
 
-.range-input::placeholder {
-  text-align: right;
+.range-paceholder {
+  position: absolute;
+  top: 12px;
+  right: 20px;
   font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
   color: #000000;
-  opacity: 60%;
+  opacity: 30%;
 }
 
 .catalog-filter-label:first-child .range-input {
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0 0 4px;
 }
 
 .catalog-filter-label:last-child .range-input {
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0 4px 4px 0;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -929,6 +963,7 @@ body {
 .button-show:hover,
 .button-show:focus {
   background-color: #68A2CA;
+  outline: none;
 }
 
 .button-reset {
@@ -944,6 +979,7 @@ body {
 
 .button-reset:focus {
   border: 3px solid #83B3D3;
+  outline: none;
 }
 
 /* Блок Найдено, Сортировка, Вид отображения */
@@ -1038,6 +1074,7 @@ body {
 
 .card-grid-toggle:focus {
   border: 2px solid #68A2CA;
+  outline: none;
 }
 
 .card-grid-toggle:active {
@@ -1059,6 +1096,7 @@ body {
 .hotel-card-link:focus {
   color: #3F5E72;
   text-decoration: underline;
+  outline: none;
 }
 
 .hotel-card-link:active {
@@ -1162,6 +1200,7 @@ body {
 .button-about:hover,
 .button-about:focus {
   background-color: #615048;
+  outline: none;
 }
 
 .button-to-favorites {
@@ -1173,6 +1212,7 @@ body {
 .button-to-favorites:hover,
 .button-to-favorites:focus {
   background-color: #68A2CA;
+  outline: none;
 }
 
 .button-favorites {
@@ -1184,6 +1224,7 @@ body {
 .button-favorites:hover,
 .button-favorites:focus {
   background-color: #6C9E42;
+  outline: none;
 }
 
 /* Звёздность жилья */
@@ -1277,6 +1318,11 @@ body {
   background-color: #F2F2F2;
 }
 
+.pagination-link-current:focus {
+  outline: none;
+  opacity: 60%;
+}
+
 .pagination-space {
   font-weight: 400;
   font-size: 22px;
@@ -1289,6 +1335,7 @@ body {
 .pagination-link:hover,
 .pagination-link:focus {
   background-color: #68A2CA;
+  outline: none;
 }
 
 .pagination-link:active {
@@ -1298,6 +1345,7 @@ body {
 .pagination-space:hover,
 .pagination-space:focus {
   background-color: #F2F2F2;
+  outline: none;
 }
 
 /* Отступ справа у всех номеров страниц, кроме последнего элемента */
