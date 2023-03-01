@@ -1374,19 +1374,20 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
+/* Ширина модального окна */
+.modal-search {
+  width: 717px;
+}
+
 /* Стиль для модального окна */
 .modal {
   position: relative;
   margin: auto;
   padding: 64px 70px;
+  box-sizing: border-box;
   background-color: #FFFFFF;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
-}
-
-/* Ширина модального окна */
-.modal-search {
-  width: 717px;
 }
 
 /* Крестик закрытия модального окна */
@@ -1424,42 +1425,155 @@ body {
   opacity: 30%;
 }
 
-/* Шрифт заголовка модального окна */
+/* Заголовок модального окна */
 .modal-title {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 64px;
   color: #000000;
 }
 
-/* Шрифт пунктов внутри модального окна */
+/* Отобразить секции друг под другом */
+.search-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Интервал между секциями */
+.field-group {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+/* Текст заголовков */
 .modal-point-title {
+  align-self: center;
   font-family: inherit;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   margin: 0;
-  margin-right: 24px;
 }
 
-/* Шрифт введенного текста в форме */
+/* Форма ввода даты*/
 .search-form .field {
   width: 440px;
   border-radius: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  padding-right: 50px;
+  margin: 0;
+  padding-right: 250px;
+  border: transparent;
 }
 
-/* .field-group {
-  display: flex;
+/* Позиционирование иконки календаря */
+.search-form-calendar {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  border: none;
+}
 
-} */
+/* Вид иконки календаря */
+.search-form-calendar svg {
+  opacity: 30%;
+  cursor: pointer;
+}
+
+/* Текст под формой ввода */
+.input-description {
+  position: absolute;
+  top: 100%;
+  left: 137px;
+  text-align: left;
+  width: 400px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+  margin: 0;
+  margin-top: 4px;
+  padding: 0 20px;
+}
+
+/* Красный текст под формой ввода */
+.input-description.error {
+  color: #FF5757;
+}
+
+.how-many-visitors {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-guest {
+  position: relative;
+  margin-left: 46px;
+}
+
+/* Форма ввода количества гостей */
+.search-form .guests-form-field {
+  width: 110px;
+  line-height: 20px;
+  text-align: center;
+  padding: 14px 0;
+  color: #000000;
+}
+
+/* Убирает стандартные "увеличить" и "уменьшить" */
+.guests-form-field::-webkit-outer-spin-button,
+.guests-form-field::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Позиционирование + и - */
+.button-minus,
+.button-plus {
+  position: absolute;
+  padding: 14px 0;
+  background-color: inherit;
+  border: transparent;
+  box-sizing: border-box;
+}
+
+.button-minus {
+  z-index: 1;
+  left: 0;
+  padding-left: 10px;
+}
+
+.button-plus {
+  right: 0;
+  padding-right: 10px;
+}
+
+/* Цвет + и - */
+.button-minus svg,
+.button-plus svg {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+/* Кнопка Найти */
+.button-search {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  width: 100%;
+  height: auto;
+  padding: 18px 77px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  text-transform: uppercase;
+}
 
 /* Скрываем модальное окно */
 /* .modal-container-close {
