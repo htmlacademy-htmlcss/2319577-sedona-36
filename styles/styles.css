@@ -1368,7 +1368,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  /* display: flex; */
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
@@ -1434,20 +1434,75 @@ body {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 64px;
+  padding-right: 50px;
   color: #000000;
 }
 
-/* Отобразить секции друг под другом */
-.search-form {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Интервал между секциями */
+/* Инпуты в модальном окне на гридах */
 .field-group {
   position: relative;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 137px 110px 88px 132px 110px;
+  grid-template-rows: repeat(2, min-content);
+}
+
+/* Расположение элементов в грид-сетке */
+/* Строка ввода даты въезда */
+.field-group .check-in {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.field-group .wrapper-check-in {
+  grid-column: 2 / 6;
+  grid-row: 1 / 2;  
+}
+
+.field-group .input-description.error {
+  grid-column: 2 / 6;
+  grid-row: 2 / 3;
+  min-height: 48px;
+}
+
+/* Строка ввода даты выезда */
+.field-group .check-out {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.field-group .wrapper-check-out {
+  grid-column: 2 / 6;
+  grid-row: 1 / 2;  
+}
+
+.field-group .input-description {
+  grid-column: 2 / 6;
+  grid-row: 2 / 3;
+  min-height: 48px;
+}
+
+/* Строка ввода количества взрослых и детей */
+.field-group .guests-adults {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.field-group .wrapper-guest-adults {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+.field-group .guests-children {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
+
+.field-group .wrapper-guest-children {
+  grid-column: 5 / 6;
+  grid-row: 1 / 3;
+}
+
+.field-group.how-many-visitors {
   margin-bottom: 48px;
 }
 
@@ -1473,34 +1528,69 @@ body {
   border: transparent;
 }
 
+.search-form .field:hover {
+  background-color: #E6E6E6;
+}
+
+.search-form .field:focus:placeholder-shown {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+/* Текст введён, курсор внутри поля */
+.search-form .field:focus:not(:placeholder-shown) {
+  background: #F2F2F2;
+  outline:  2px solid #000000;
+}
+
+.search-form .field:disabled {
+  opacity: 30%;
+}
+
 /* Позиционирование иконки календаря */
 .search-form-calendar {
   position: absolute;
   top: 14px;
   right: 20px;
   border: none;
+  background-color: transparent;
 }
 
 /* Вид иконки календаря */
 .search-form-calendar svg {
-  opacity: 30%;
+  fill: rgba(0, 0, 0, 0.6);
   cursor: pointer;
+}
+
+.search-form-calendar:hover svg {
+  outline: none;
+  fill: #000000;
+}
+
+.search-form-calendar:focus {
+  outline: 3px solid #82b3d3;
+  border-radius: 4px;
+}
+
+.search-form-calendar:focus-visible svg {
+  fill: #000000;
+}
+
+.search-form-calendar:active svg {
+  outline: none;
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 /* Текст под формой ввода */
 .input-description {
-  position: absolute;
-  top: 100%;
-  left: 137px;
   text-align: left;
-  width: 400px;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   color: #333333;
   margin: 0;
   margin-top: 4px;
-  padding: 0 20px;
+  padding-left: 20px;
 }
 
 /* Красный текст под формой ввода */
@@ -1508,14 +1598,9 @@ body {
   color: #FF5757;
 }
 
-.how-many-visitors {
-  display: flex;
-  justify-content: space-between;
-}
-
-.wrapper-guest {
+.wrapper-guest-adults,
+.wrapper-guest-children {
   position: relative;
-  margin-left: 46px;
 }
 
 /* Форма ввода количества гостей */
@@ -1534,31 +1619,56 @@ body {
   margin: 0;
 }
 
-/* Позиционирование + и - */
+/* Оформление и позиционирование + и - */
 .button-minus,
 .button-plus {
   position: absolute;
-  padding: 14px 0;
-  background-color: inherit;
+  height: 48px;
+  padding: 14px 10px;
   border: transparent;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .button-minus {
   z-index: 1;
   left: 0;
-  padding-left: 10px;
+  border-radius: 4px 0 0 4px;
 }
 
 .button-plus {
   right: 0;
-  padding-right: 10px;
+  border-radius: 0 4px 4px 0;
 }
 
-/* Цвет + и - */
+/* Цвет + и - в покое */
 .button-minus svg,
 .button-plus svg {
   fill: rgba(117, 97, 87, 0.3);
+}
+
+.button-minus:hover svg,
+.button-plus:hover svg {
+  outline: none;
+  fill: #000000;
+}
+
+.button-minus:focus,
+.button-plus:focus {
+  outline: none;
+}
+
+.button-minus:focus-visible svg,
+.button-plus:focus-visible svg {
+  outline: 3px solid #82b3d3;
+  border-radius: 4px;
+  fill: #000000;
+}
+
+.button-minus:active svg,
+.button-plus:active svg {
+  outline: none;
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 /* Кнопка Найти */
@@ -1573,6 +1683,89 @@ body {
   color: #FFFFFF;
   background-color: #83B3D3;
   text-transform: uppercase;
+}
+
+.button-search:hover,
+.button-search:focus {
+  background-color: #68A2CA;
+  outline: none;
+}
+
+.button-search:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Позиционирование тултипа */
+.tooltip {
+  position: absolute;
+  left: 394px;
+  top: 11px;
+}
+
+/* Вид иконки информации */
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  color: #83B3D3;
+  display: block;
+  cursor: pointer;
+}
+
+.tooltip-toggle:hover .tooltip-icon{
+  color: #68A2CA;
+}
+
+/* Оформление текста и фона тултипа */
+.tooltip-text {
+  width: 256px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  font-style: normal;
+  text-transform: none;
+  padding: 15px 18px 18px 22px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  background-color: #333333;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  /* Позиционирование окна */
+  position: absolute;
+  top: 100%;
+  margin-top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  /* Скрыть текст */
+  display: none;
+}
+
+/* Появление текстового блока, при наведении на кнопку */
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+/* Сброс оформления кнопки информации */
+.tooltip-toggle {
+  display: block;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.tooltip-text:before {
+  content:'';
+  background-image: url("../images/icons/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Скрываем модальное окно */
