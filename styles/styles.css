@@ -1022,7 +1022,7 @@ body {
   border-color: #68A2CA;
 }
 
-.select-control:focus {
+.select-control:focus:not(:placeholder-shown) {
   border-color: #3F5E72;
   outline: none;
 }
@@ -1455,7 +1455,7 @@ body {
 
 .field-group .wrapper-check-in {
   grid-column: 2 / 6;
-  grid-row: 1 / 2;  
+  grid-row: 1 / 2;
 }
 
 .field-group .input-description.error {
@@ -1472,7 +1472,7 @@ body {
 
 .field-group .wrapper-check-out {
   grid-column: 2 / 6;
-  grid-row: 1 / 2;  
+  grid-row: 1 / 2;
 }
 
 .field-group .input-description {
@@ -1727,7 +1727,7 @@ body {
   box-sizing: border-box;
   color: #FFFFFF;
   background-color: #333333;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   /* Позиционирование окна */
   position: absolute;
@@ -1769,6 +1769,6 @@ body {
 }
 
 /* Скрываем модальное окно */
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
