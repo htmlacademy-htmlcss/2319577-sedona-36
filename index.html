@@ -245,72 +245,84 @@
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
 
           <section class="field-group">
-            <label class="modal-point-title" for="check-in">Дата Заезда:</label>
-            <input class="field search-form-field" type="text" id="check-in" name="check-in" placeholder="" value="27 апреля 2020" required>
-            <button class="search-form-calendar" type="button" aria-label="Календарь">
-              <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.143 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z" fill="#000"/>
-                <path d="M15.393 2h-2V0h-1v2h-8V0h-1v2h-2c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12h-14V7h14v7Zm-14-8V3h2v2h1V3h8v2h1V3h2v3h-14Z" fill="#000"/>
-                <path d="M8.393 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM10.643 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM6.143 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.893 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM3.893 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8.393 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.643 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.893 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.893 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" fill="#000"/>
-              </svg>
-            </button>
+            <label class="modal-point-title check-in" for="check-in">Дата Заезда:</label>
+            <div class="wrapper-check-in">
+              <input class="field search-form-field" type="text" id="check-in" name="check-in" placeholder="Укажите дату"
+                value="27 апреля 2020" required>
+              <button class="search-form-calendar" type="button" aria-label="Календарь">
+                <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.143 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z"/>
+                  <path d="M15.393 2h-2V0h-1v2h-8V0h-1v2h-2c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12h-14V7h14v7Zm-14-8V3h2v2h1V3h8v2h1V3h2v3h-14Z"/>
+                  <path d="M8.393 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM10.643 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM6.143 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.893 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM3.893 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8.393 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.643 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.893 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.893 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/>
+                </svg>
+              </button>
+            </div>
             <p class="input-description error">Мы не можем отправить вас в прошлое.</p>
           </section>
 
           <section class="field-group">
-            <label class="modal-point-title" for="check-out">Дата Выезда:</label>
-            <input class="field search-form-field" type="text" id="check-out" name="check-out" placeholder="" value="1 сентября 2023" required>
-            <button class="search-form-calendar" type="button" aria-label="Календарь">
-              <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.143 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z" fill="#000"/>
-                <path d="M15.393 2h-2V0h-1v2h-8V0h-1v2h-2c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12h-14V7h14v7Zm-14-8V3h2v2h1V3h8v2h1V3h2v3h-14Z" fill="#000"/>
-                <path d="M8.393 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM10.643 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM6.143 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.893 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM3.893 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8.393 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.643 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.893 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.893 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" fill="#000"/>
-              </svg>
-            </button>
+            <label class="modal-point-title check-out" for="check-out">Дата Выезда:</label>
+            <div class="wrapper-check-out">
+              <input class="field search-form-field" type="text" id="check-out" name="check-out" placeholder="Укажите дату"
+                value="1 сентября 2023" required>
+              <button class="search-form-calendar" type="button" aria-label="Календарь">
+                <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.143 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z"/>
+                  <path d="M15.393 2h-2V0h-1v2h-8V0h-1v2h-2c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12h-14V7h14v7Zm-14-8V3h2v2h1V3h8v2h1V3h2v3h-14Z"/>
+                  <path d="M8.393 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM10.643 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM6.143 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.893 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM3.893 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8.393 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.643 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.893 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.893 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/>
+                </svg>
+              </button>
+            </div>
             <p class="input-description">На эти даты есть свободные номера. Пока есть.</p>
           </section>
 
-          <div class="how-many-visitors">
-            <section class="field-group">
-              <label class="modal-point-title" for="guests-adults">Взрослые:</label>
-              <div class="wrapper-guest">
-                <button class="button-minus" type="button">
-                  <span class="visually-hidden">Минус</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
-                    <path d="M3 9v2h14V9H3Z"/>
-                  </svg>
-                </button>
-                <input class="field guests-form-field" type="number" id="check-out" name="check-out" value="2">
-                <button class="button-plus" type="button">
-                  <span class="visually-hidden">Плюс</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
-                    <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/>
-                  </svg>
-                </button>
-              </div>
-            </section>
+          <section class="field-group how-many-visitors">
+            <label class="modal-point-title guests-adults" for="guests-adults">Взрослые:</label>
+            <div class="wrapper-guest-adults">
+              <button class="button-minus" type="button">
+                <span class="visually-hidden">Минус</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                  <path d="M3 9v2h14V9H3Z" />
+                </svg>
+              </button>
+              <input class="field guests-form-field" type="number" id="guests-adults" name="guests-adults" placeholder="0" value="2">
+              <button class="button-plus" type="button">
+                <span class="visually-hidden">Плюс</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                  <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+                </svg>
+              </button>
+            </div>
 
-            <section class="field-group">
-              <label class="modal-point-title" for="guests-children">Дети:</label>
-              <!-- <span class="">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
-                размещаются бесплатно.</span> -->
-              <div class="wrapper-guest">
-                <button class="button-minus" type="button">
-                  <span class="visually-hidden">Минус</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
-                      <path d="M3 9v2h14V9H3Z"/>
-                    </svg>
-                </button>
-                <input class="field guests-form-field" type="number" id="check-out" name="check-out" value="2">
-                <button class="button-plus" type="button">
-                  <span class="visually-hidden">Плюс</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
-                    <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/>
-                  </svg>
-                </button>
-              </div>
-            </section>
-          </div>
+            <label class="modal-point-title guests-children" for="guests-children">Дети:</label>
+
+            <span class="tooltip">
+              <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="13" cy="13" r="13" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff"/>
+                </svg>
+              </button>
+              <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </span>
+
+            <div class="wrapper-guest-children">
+              <button class="button-minus" type="button">
+                <span class="visually-hidden">Минус</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                  <path d="M3 9v2h14V9H3Z" />
+                </svg>
+              </button>
+              <input class="field guests-form-field" type="number" id="guests-children" name="guests-children" placeholder="0" value="2">
+              <button class="button-plus" type="button">
+                <span class="visually-hidden">Плюс</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                  <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+                </svg>
+              </button>
+            </div>
+          </section>
+
           <button class="button button-search" type="submit">Найти</button>
         </form>
       </section>
