@@ -1458,7 +1458,7 @@ body {
   align-self: center;
 }
 
-/* Строка коментириев */
+/* Строка комментириев */
 .field-group .input-description.error {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -1477,7 +1477,7 @@ body {
   align-self: center;
 }
 
-/* Строка коментириев */
+/* Строка комментириев */
 .field-group .input-description {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
