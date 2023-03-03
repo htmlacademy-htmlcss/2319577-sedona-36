@@ -243,11 +243,11 @@
       <section class="modal-content">
         <h2 class="modal-title">Поиск гостиниц в Седоне</h2>
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-
+          <!-- Обертка для ввода даты заезда с коментарием -->
           <section class="field-group">
             <label class="modal-point-title check-in" for="check-in">Дата Заезда:</label>
             <div class="wrapper-check-in">
-              <input class="field search-form-field" type="text" id="check-in" name="check-in" placeholder="Укажите дату"
+              <input class="field" type="text" id="check-in" name="check-in" placeholder="Укажите дату"
                 value="27 апреля 2020" required>
               <button class="search-form-calendar" type="button" aria-label="Календарь">
                 <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -259,11 +259,11 @@
             </div>
             <p class="input-description error">Мы не можем отправить вас в прошлое.</p>
           </section>
-
+          <!-- Обертка для ввода даты выезда с коментарием -->
           <section class="field-group">
             <label class="modal-point-title check-out" for="check-out">Дата Выезда:</label>
             <div class="wrapper-check-out">
-              <input class="field search-form-field" type="text" id="check-out" name="check-out" placeholder="Укажите дату"
+              <input class="field" type="text" id="check-out" name="check-out" placeholder="Укажите дату"
                 value="1 сентября 2023" required>
               <button class="search-form-calendar" type="button" aria-label="Календарь">
                 <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -275,7 +275,7 @@
             </div>
             <p class="input-description">На эти даты есть свободные номера. Пока есть.</p>
           </section>
-
+          <!-- Обертка ввода количества взрослых и детей -->
           <section class="field-group how-many-visitors">
             <label class="modal-point-title guests-adults" for="guests-adults">Взрослые:</label>
             <div class="wrapper-guest-adults">
@@ -295,7 +295,7 @@
             </div>
 
             <label class="modal-point-title guests-children" for="guests-children">Дети:</label>
-
+            <!-- Всплывающее окно-информации (тултип) -->
             <span class="tooltip">
               <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
                 <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
