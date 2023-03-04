@@ -22,6 +22,7 @@ html {
 
 /* Стиль для тела страницы */
 body {
+  min-width: 1200px;
   margin: 0;
   display: flex;
   flex-direction: column;
