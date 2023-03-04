@@ -521,6 +521,8 @@ body {
 
 /* Кнопка подписаться */
 .newsletter-subscribe {
+  font-size: 20px;
+  line-height: 36px;
   width: 232px;
   height: 52px;
   padding: 8px 50px;
