@@ -100,7 +100,7 @@ body {
 
 .navigation-link-current::before {
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   width: 100%;
   height: 2px;
@@ -223,7 +223,8 @@ body {
   padding: 0;
   border: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
   left: -10000px;
@@ -898,9 +899,11 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
+/* Убирает стандартные увеличение/уменьшение числа в поле типа "число" */
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1007,7 +1010,8 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   width: 290px;
   padding: 12px 20px;
   padding-right: 40px;
@@ -1637,10 +1641,11 @@ body {
   color: #000000;
 }
 
-/* Убирает стандартные "увеличить" и "уменьшить" */
+/* Убирает стандартные увеличение/уменьшение числа в поле типа "число" */
 .guests-form-field::-webkit-outer-spin-button,
 .guests-form-field::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
