@@ -14,6 +14,7 @@
     <header class="page-header" data-test="header">
       <!-- Добавим навигацию -->
       <nav class="navigation">
+        <span class="visually-hidden">Навигация</span>
         <a class="navigation-logo" href="index.html">
           <img class="page-logo" src="images/logo.svg" width="140" height="70" alt="Логотип городка Седона">
         </a>
@@ -179,7 +180,7 @@
         <!-- Разбиваем "подвал" на секции -->
         <!-- Добавляем ссылки на социальные сети -->
         <section class="footer-social">
-          <p class="visually-hidden">Социальные сети</p>
+          <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
               <a class="footer-social-link footer-social-vk" href="https://vk.com/htmlacademy">
@@ -217,11 +218,13 @@
 
         <!-- Добавляем контактный телефон -->
         <section class="contacts">
+          <h2 class="visually-hidden">Контактный телефон</h2>
           <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </section>
 
         <!-- Добавляем ссылку на сайт HTML Академии -->
         <section class="author">
+          <h2 class="visually-hidden">Автор сайта</h2>
           <a class="author-link" href="https://htmlacademy.ru/">
             <svg class="author-icon" xmlns="http://www.w3.org/2000/svg" width="115" height="34" fill="none"
               viewBox="0 0 115 34">
@@ -246,6 +249,7 @@
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <!-- Обертка для ввода даты заезда с коментарием -->
           <section class="field-group">
+            <h3 class="visually-hidden">Строка ввода даты заезда</h3>
             <label class="modal-point-title check-in" for="check-in">Дата Заезда:</label>
             <div class="wrapper-check-in">
               <input class="field" type="text" id="check-in" name="check-in" placeholder="Укажите дату"
@@ -262,6 +266,7 @@
           </section>
           <!-- Обертка для ввода даты выезда с коментарием -->
           <section class="field-group">
+            <h3 class="visually-hidden">Строка ввода даты выезда</h3>
             <label class="modal-point-title check-out" for="check-out">Дата Выезда:</label>
             <div class="wrapper-check-out">
               <input class="field" type="text" id="check-out" name="check-out" placeholder="Укажите дату"
@@ -278,6 +283,7 @@
           </section>
           <!-- Обертка ввода количества взрослых и детей -->
           <section class="field-group how-many-visitors">
+            <h3 class="visually-hidden">Строка ввода количества гостей</h3>
             <label class="modal-point-title guests-adults" for="guests-adults">Взрослые:</label>
             <div class="wrapper-guest-adults">
               <button class="button-minus" type="button">
