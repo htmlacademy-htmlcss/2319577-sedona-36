@@ -49,6 +49,8 @@ body {
 /* Сетка навигации */
 .navigation {
   display: flex;
+  margin: 0 auto;
+  width: 1060px;
   min-height: 64px;
 }
 
@@ -56,7 +58,6 @@ body {
   display: flex;
   position: relative;
   width: 140px;
-  margin-left: 70px;
   margin-right: 28px;
   /* Низ логотипа поверх изображения */
   margin-bottom: -6px;
@@ -75,32 +76,34 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: start;
   align-items: center;
-  width: 500px;
+  width: 530px;
   margin: 0;
   padding: 0;
-  margin-right: 130px;
+  margin-right: 20px;
 }
 
 .navigation-link {
   position: relative;
   display: block;
-  padding: 20px 0;
-  margin: 0 16px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   text-align: center;
   color: #000000;
   text-decoration: none;
+  padding: 20px 0;
+  margin: 0 16px;
   min-width: 44px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+/* Ползунок в навигации под активной страницей */
 .navigation-link-current::before {
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 2px;
@@ -122,6 +125,8 @@ body {
 .navigation-user {
   max-width: 350px;
   margin-left: auto;
+  flex-wrap: wrap;
+  justify-content: end;
   margin-right: auto;
 }
 
@@ -132,8 +137,7 @@ body {
 
 .navigation-link svg {
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  align-self: center;
   fill: #000000;
 }
 
@@ -176,7 +180,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   width: 160px;
-  height: 36px;
+  min-height: 36px;
   color: #ffffff;
   background-color: #756157;
   border-radius: 4px;
@@ -388,12 +392,15 @@ body {
   background-image: url("../images/icons/services-food.svg");
   width: 74px;
   height: 70px;
+  margin-bottom: 31px;
 }
 
 .souvenire::before {
   background-image: url("../images/icons/services-souvenire.svg");
   width: 64px;
   height: 76px;
+  margin-top: -2px;
+  margin-bottom: 28px;
 }
 
 /* Расцветка заднего фона блоков */
@@ -539,14 +546,16 @@ body {
 }
 
 /* Сетка подвала сайта */
+.page-footer {
+  min-height: 120px;
+}
+
 .page-footer-container {
   display: flex;
-  align-items: center;
   width: 1060px;
-  min-height: 120px;
-  padding: 0;
-  margin: 0;
-  margin-left: 70px;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 35px;
 }
 
 /* Социальные сети */
@@ -592,12 +601,15 @@ body {
 }
 
 /* Контактный телефон */
+.contacts {
+  width: 350px;
+  margin-right: 150px;
+}
+
 .contacts-phone {
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
-  margin-left: auto;
-  margin-right: 230px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -616,8 +628,8 @@ body {
 
 /* HTML Academy */
 .author {
-  margin-left: auto;
   max-width: 115px;
+  margin-left: auto;
 }
 
 .author-link {
