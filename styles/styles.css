@@ -264,7 +264,7 @@ body {
 /* Приветствие */
 .hero {
   background-image: url("../images/divider.svg"), url("../images/index-background.jpg");
-  background-color: #faf9f9d0;
+  background-color: rgba(131, 179, 211, 0.6);;
   background-position: bottom, center;
   background-repeat: no-repeat;
   background-size: auto;
@@ -465,7 +465,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: #82B3D3;
+  background-color: rgba(131, 179, 211, 0.6);;
   min-height: 415px;
 }
 
@@ -677,12 +677,11 @@ body {
 /* СТИЛИЗАЦИЯ СТРАНИЦЫ КАТАЛОГА */
 /* Фильтр поиска */
 .main-filters {
-  font-weight: 700;
   background-image: url("../images/filter.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: #82B3D3;
+  background-color: rgba(131, 179, 211, 0.6);
   color: #ffffff;
   min-height: 412px;
   padding: 70px;
@@ -692,6 +691,7 @@ body {
 
 /* Заголовок фильтра поиска */
 .inner-header-title {
+  font-weight: 700;
   font-size: 60px;
   line-height: 78px;
   padding: 0;
@@ -779,7 +779,7 @@ body {
   width: 150px;
   padding: 0;
   margin: 0;
-  margin-right: 70px;
+  margin-right: 69px;
   border: none;
 }
 
@@ -806,7 +806,7 @@ body {
 /* Стилизация чекбокса */
 .control-mark {
   position: absolute;
-  top: 2px;
+  top: 1px;
   left: 0;
   width: 20px;
   height: 20px;
@@ -878,15 +878,20 @@ body {
 
 .range-input {
   position: relative;
-  padding: 12px 20px;
   padding-right: 45px;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   text-align: left;
+  padding: 12px 18px;
   background-color: #F2F2F2;
-  border: 2px solid transparent;
+  border: transparent;
   box-sizing: border-box;
+}
+
+.range-input::placeholder {
+  color: #000000;
+  opacity: 60%;
 }
 
 .range-input:hover {
@@ -1001,9 +1006,10 @@ body {
 }
 
 .button-reset {
-  padding: 6px 50px;
+  padding: 4px 50px;
   width: 191px;
   border: 3px solid transparent;
+  box-sizing: border-box;
   background-color: #82b2d300;
 }
 
@@ -1041,13 +1047,13 @@ body {
   -webkit-appearance: none;
           appearance: none;
   width: 290px;
-  padding: 12px 20px;
+  padding: 12px 18px;
   padding-right: 40px;
   margin-left: auto;
   margin-right: 70px;
   background-image: url("../images/icons/arrow-down.svg");
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  background-position: right 16px center;
   color: #333333;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
