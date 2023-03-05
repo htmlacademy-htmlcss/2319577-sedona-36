@@ -511,16 +511,26 @@ body {
   opacity: 60%;
 }
 
-/* Текст введен не по образцу */
-.field:focus:invalid {
-  outline: 2px solid #f36565;
-  border: transparent;
+.field:hover {
+  background-color: #E6E6E6;
 }
 
-.field:hover,
-.field:focus {
-  border: 2px solid #68A2CA;
+.field:focus:placeholder-shown {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
+}
+
+.field:focus:not(:placeholder-shown) {
+  background: #F2F2F2;
+  border:  2px solid #000000;
   outline: none;
+}
+
+.field:focus:not(:placeholder-shown):invalid {
+  background: #F2F2F2;
+  outline: 2px solid #f36565;
+  outline-offset: -2px;
 }
 
 .field:disabled {
@@ -774,7 +784,7 @@ body {
 }
 
 .catalog-filter-title {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .catalog-filter-list {
@@ -879,17 +889,23 @@ body {
   box-sizing: border-box;
 }
 
-.range-input:focus {
+.range-input:hover {
+  background-color: #E6E6E6;
+}
+
+.range-input:focus:placeholder-shown {
+  background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
 }
 
-.range-input:active {
-  border: 2px solid #000000;
+.range-input:focus:not(:placeholder-shown) {
+  background: #F2F2F2;
+  border:  2px solid #000000;
   outline: none;
 }
 
 .range-input:disabled {
-  background-color: #E5E5E5;
+  opacity: 30%;
 }
 
 .range-paceholder {
@@ -1811,6 +1827,6 @@ body {
 }
 
 /* Скрываем модальное окно */
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
