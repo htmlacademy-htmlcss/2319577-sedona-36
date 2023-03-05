@@ -1529,8 +1529,8 @@ body {
 .how-many-visitors .guests-children {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
-  text-align: end;
-  padding-left: 20px;
+  justify-self: end;
+  margin-left: 20px;
   margin-right: 82px;
 }
 
@@ -1811,6 +1811,6 @@ body {
 }
 
 /* Скрываем модальное окно */
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
