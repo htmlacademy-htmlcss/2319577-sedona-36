@@ -784,7 +784,7 @@ body {
 }
 
 .catalog-filter-title {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .catalog-filter-list {
@@ -858,14 +858,14 @@ body {
 
 /* Стоимость фильтр */
 .filter-cost {
-  width: 290px;
+  min-width: 288px;
   margin-left: 70px;
 }
 
 /* Оформление полей ввода диапазона цены */
 .range-wrapper-inputs {
   display: flex;
-  margin-bottom: 44px;
+  margin-bottom: 46px;
 }
 
 .catalog-filter-label {
@@ -878,14 +878,15 @@ body {
 
 .range-input {
   position: relative;
-  padding-right: 45px;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   text-align: left;
-  padding: 12px 18px;
+  width: auto;
+  padding: 10px 20px;
+  padding-right: 40px;
   background-color: #F2F2F2;
-  border: transparent;
+  border: 2px solid transparent;
   box-sizing: border-box;
 }
 
@@ -982,7 +983,7 @@ body {
 
 .toggle-max {
   top: -12px;
-  right: 0;
+  right: -2px;
 }
 
 /* Кнопка Применить и Сбросить */
@@ -994,8 +995,8 @@ body {
 .button-show {
   padding: 8px 50px;
   width: 191px;
-  margin-top: 56px;
-  margin-bottom: 32px;
+  margin-top: 54px;
+  margin-bottom: 33px;
   background-color: #82B3D3;
 }
 
@@ -1095,6 +1096,10 @@ body {
   color: #000000;
 }
 
+.card-grid-toggle-current {
+  border: 2px solid #000000;
+}
+
 /* Убирает отступ у последнего элемента */
 .card-grid-toggle:last-child {
   margin-right: 0;
@@ -1103,10 +1108,6 @@ body {
 .card-grid-toggle svg {
   position: absolute;
   fill: #000000;
-}
-
-.card-grid-toggle-current {
-  border: 2px solid #000000;
 }
 
 .card-grid-toggle:hover {
@@ -1167,20 +1168,23 @@ body {
   display: grid;
   padding: 20px;
   grid-template-columns: 140px 20px 140px;
-  grid-template-rows: 1fr min-content min-content min-content;
+  grid-template-rows: min-content min-content min-content min-content;
   row-gap: 16px;
   border: 1px solid #E6E6E6;
+  box-sizing: border-box;
   border-radius: 4px;
 }
 
 /* Т.к. заголовок внутри ссылки, он считается одним элементом с картинкой для грида */
 .hotel-card-image {
-  margin-bottom: 16px;
+  display: block;
+  object-fit: fill;
+  margin-top: -2px;
+  margin-bottom: 15px;
 }
 
 .hotel-card-title {
   width: 300px;
-  align-self: center;
   text-transform: none;
   margin: 0;
 }
@@ -1280,23 +1284,23 @@ body {
 
 /* У каждого класса определяется ширина, которая и определяет, сколько звезд и отобразится */
 .hotel-stars-1 {
-  width: 20px;
+  width: 24px;
 }
 
 .hotel-stars-2 {
-  width: 39px;
+  width: 48px;
 }
 
 .hotel-stars-3 {
-  width: 61px;
+  width: 72px;
 }
 
 .hotel-stars-4 {
-  width: 83px;
+  width: 96px;
 }
 
 .hotel-stars-5 {
-  width: 106px;
+  width: 120px;
 }
 
 /* Рейтинг жилья */
@@ -1308,8 +1312,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   width: 140px;
-  height: 37px;
-  padding: 8px 22px;
+  padding: 9px 22px;
   margin: 0;
   border-radius: 4px;
   color: #333333;
@@ -1319,6 +1322,7 @@ body {
 
 /* Переход по страницам */
 .pagination {
+  position: relative;
   display: flex;
   width: 1060px;
   margin: 0;
@@ -1326,6 +1330,15 @@ body {
   margin-right: auto;
   margin-bottom: 60px;
   padding: 0;
+}
+
+.pagination::before {
+  position: absolute;
+  top: -40px;
+  width: 1060px;
+  height: 0;
+  border-bottom: 1px solid #E6E6E6;
+  content: ""
 }
 
 .pagination-item {
@@ -1368,7 +1381,7 @@ body {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  padding-top: 18px;
+  padding-top: 16px;
   color: #000000;
   background-color: #FFFFFF;
 }
