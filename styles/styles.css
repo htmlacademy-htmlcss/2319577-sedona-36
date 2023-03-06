@@ -420,6 +420,12 @@ body {
   background-color: #ffffff;
 }
 
+.real-town,
+.devil-bridge {
+  display: block;
+  object-fit: fill;
+}
+
 .advantages-real-town,
 .advantages-devil-bridge {
   display: flex;
@@ -446,7 +452,6 @@ body {
 /* Кнопка поиска гостиниц */
 .hotel-search {
   width: 376px;
-  height: 52px;
   font-size: 20px;
   line-height: 36px;
   padding: 8px 50px;
@@ -542,7 +547,6 @@ body {
   font-size: 20px;
   line-height: 36px;
   width: 232px;
-  height: 52px;
   padding: 8px 50px;
   box-sizing: border-box;
   border-radius: 0 4px 4px 0;
@@ -1030,7 +1034,7 @@ body {
   padding: 0;
   margin-bottom: 40px;
   width: 1060px;
-  height: 49px;
+  min-height: 49px;
 }
 
 .catalog-search {
@@ -1352,7 +1356,7 @@ body {
   display: block;
   padding: 12px 0;
   width: 60px;
-  height: 60px;
+  min-height: 60px;
   box-sizing: border-box;
   text-decoration: none;
   border-radius: 4px;
