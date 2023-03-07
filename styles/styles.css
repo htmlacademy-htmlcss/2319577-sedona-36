@@ -35,6 +35,28 @@ body {
   min-height: 100%;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Убирает скрытый текст */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  left: -10000px;
+}
+
+
 /* Выравнивание проекта по центру */
 .wrapper {
   width: 1200px;
@@ -216,22 +238,6 @@ body {
 .hotel-list,
 .pagination {
   list-style: none;
-}
-
-/* Убирает скрытый текст */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-  left: -10000px;
 }
 
 /* Тело страницы */
