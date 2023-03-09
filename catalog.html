@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -18,13 +19,13 @@
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
+            <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
@@ -48,7 +49,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="button get-here" href="#">ХОЧУ СЮДА!</a>
+            <a class="button get-here" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -106,7 +107,7 @@
                     <label class="control">
                       <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
                       <span class="control-mark"></span>
-                      <span class="control-label">Wi-fi</span>
+                      <span class="control-label">Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -146,21 +147,21 @@
                 <div class="range">
                   <div class="range-wrapper-inputs">
                     <label class="catalog-filter-label">
-                      <input class="range-input" type="number" value="0" name="min-price" style="width: 143px">
+                      <input class="range-input" type="number" placeholder="0" value="0" name="min-price">
                       <span class="range-paceholder">от</span>
                     </label>
                     <label class="catalog-filter-label">
-                      <input class="range-input" type="number" value="9000" name="max-price" style="width: 143px">
+                      <input class="range-input" type="number" placeholder="0" value="9000" name="max-price">
                       <span class="range-paceholder">до</span>
                     </label>
                   </div>
 
                   <div class="range-scale">
-                    <div class="range-bar" style="left: 0; width: 226px">
-                      <button class="range-toggle toggle-min">
+                    <div class="range-bar" style="left: 0">
+                      <button class="range-toggle toggle-min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену</span>
                       </button>
-                      <button class="range-toggle toggle-max">
+                      <button class="range-toggle toggle-max" type="button">
                         <span class="visually-hidden">Изменить максимальную цену</span>
                       </button>
                     </div>
@@ -221,7 +222,7 @@
           <ul class="hotel-list" data-test="catalog">
             <li class="hotel-card">
               <a class="hotel-card-link" href="#">
-                <img class="hotel-card-image" src="images/hotels/hotel-1.jpg" alt="Курортный отель и спа-центр Amara">
+                <img class="hotel-card-image" src="images/hotels/hotel-1.jpg" width="300" height="212" alt="Курортный отель и спа-центр Amara">
                 <h3 class="hotel-card-title">Amara Resort &amp; Spa</h3>
               </a>
               <span class="hotel-card-type">Гостиница</span>
@@ -235,7 +236,7 @@
             </li>
             <li class="hotel-card">
               <a class="hotel-card-link" href="#">
-                <img class="hotel-card-image" src="images/hotels/hotel-2.jpg" alt="Виллы в Poco Diablo">
+                <img class="hotel-card-image" src="images/hotels/hotel-2.jpg" width="300" height="212" alt="Виллы в Poco Diablo">
                 <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
               </a>
               <span class="hotel-card-type">Гостиница</span>
@@ -249,7 +250,7 @@
             </li>
             <li class="hotel-card">
               <a class="hotel-card-link" href="#">
-                <img class="hotel-card-image" src="images/hotels/hotel-3.jpg" alt="Гостиница Пустынный перепел">
+                <img class="hotel-card-image" src="images/hotels/hotel-3.jpg" width="300" height="212" alt="Гостиница Пустынный перепел">
                 <h3 class="hotel-card-title">Desert Quail Inn</h3>
               </a>
               <span class="hotel-card-type">Гостиница</span>
@@ -263,7 +264,7 @@
             </li>
             <li class="hotel-card">
               <a class="hotel-card-link" href="#">
-                <img class="hotel-card-image" src="images/hotels/hotel-4.jpg" alt="Гостиница Зеленое дерево">
+                <img class="hotel-card-image" src="images/hotels/hotel-4.jpg" width="300" height="212" alt="Гостиница Зеленое дерево">
                 <h3 class="hotel-card-title">GreenTree Inn</h3>
               </a>
               <span class="hotel-card-type">Гостиница</span>
@@ -325,7 +326,7 @@
         <!-- Разбиваем "подвал" на секции -->
         <!-- Добавляем ссылки на социальные сети -->
         <section class="footer-social">
-          <p class="visually-hidden">Социальные сети</p>
+          <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
               <a class="footer-social-link footer-social-vk" href="https://vk.com/htmlacademy">
@@ -363,11 +364,13 @@
 
         <!-- Добавляем контактный телефон -->
         <section class="contacts">
+          <h2 class="visually-hidden">Контактный телефон</h2>
           <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </section>
 
         <!-- Добавляем ссылку на сайт HTML Академии -->
         <section class="author">
+          <h2 class="visually-hidden">Автор сайта</h2>
           <a class="author-link" href="https://htmlacademy.ru/">
             <svg class="author-icon" xmlns="http://www.w3.org/2000/svg" width="115" height="34" fill="none"
               viewBox="0 0 115 34">

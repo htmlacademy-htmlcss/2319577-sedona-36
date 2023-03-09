@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -13,6 +14,7 @@
     <header class="page-header" data-test="header">
       <!-- Добавим навигацию -->
       <nav class="navigation">
+        <span class="visually-hidden">Навигация</span>
         <a class="navigation-logo" href="index.html">
           <img class="page-logo" src="images/logo.svg" width="140" height="70" alt="Логотип городка Седона">
         </a>
@@ -48,7 +50,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="button get-here" href="#">ХОЧУ СЮДА!</a>
+            <a class="button get-here" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -76,17 +78,17 @@
           <ul class="advantages-list">
             <li class="advantages-dark-blue">
               <div class="block-content">
-                <h3 class="advantages-item special">Настоящий городок</h3>
+                <h3 class="advantages-item special">Настоящий<br>городок</h3>
                 <p class="advantages-description special">Седона — не аттракцион для туристов, там течёт своя жизнь
                 </p>
               </div>
             </li>
             <li class="advantages-real-town">
-              <img class="real-town" src="images/photo-1.jpg" width="800" height="385" alt="Городок Седона">
+              <img class="real-town" src="images/photo-1.jpg" width="800" min-height="385" alt="Балкон с видом на горы">
             </li>
             <li class="advantages-light-blue">
               <div class="block-content">
-                <h3 class="advantages-item">Небольшая площадь</h3>
+                <h3 class="advantages-item">Небольшая<br>площадь</h3>
                 <p class="advantages-description">Все достопримечательности находятся очень близко</p>
               </div>
             </li>
@@ -103,11 +105,11 @@
               </div>
             </li>
             <li class="advantages-devil-bridge">
-              <img class="devil-bridge" src="images/photo-2.jpg" width="800" height="385" alt="Мост дьявола">
+              <img class="devil-bridge" src="images/photo-2.jpg" alt="Мост дьявола">
             </li>
             <li class="advantages-dark-blue">
               <div class="block-content">
-                <h3 class="advantages-item special">Там есть мост дьявола</h3>
+                <h3 class="advantages-item special">Там есть мост&nbsp;дьявола</h3>
                 <p class="advantages-description special">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
             </li>
@@ -124,8 +126,8 @@
           <ul class="services-list">
             <li class="advantages-blue">
               <div class="block-content">
-                <h3 class="services-item home">Жилье</h3>
-                <p class="services-description">Рекомендуем пожить в настоящем мотеле,<br>всё как в кино!</p>
+                <h3 class="services-item">Жильё</h3>
+                <p class="services-description">Рекомендуем пожить в&nbsp;настоящем мотеле,<br>всё как в кино!</p>
               </div>
             </li>
             <li class="advantages-white">
@@ -148,7 +150,7 @@
         <section class="booking-head" data-test="search">
           <h2 class="booking-title">Заинтересовались?</h2>
           <!-- Нужен правильный перенос -->
-          <p class="booking-description-section">Укажите предполагаемые даты поездки, и мы покажем вам лучшие
+          <p class="booking-description-section">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
             предложения гостиниц в Седоне</p>
           <a class="button hotel-search" href="catalog.html">Поиск гостиницы в Седоне</a>
         </section>
@@ -178,7 +180,7 @@
         <!-- Разбиваем "подвал" на секции -->
         <!-- Добавляем ссылки на социальные сети -->
         <section class="footer-social">
-          <p class="visually-hidden">Социальные сети</p>
+          <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
               <a class="footer-social-link footer-social-vk" href="https://vk.com/htmlacademy">
@@ -216,11 +218,13 @@
 
         <!-- Добавляем контактный телефон -->
         <section class="contacts">
+          <h2 class="visually-hidden">Контактный телефон</h2>
           <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </section>
 
         <!-- Добавляем ссылку на сайт HTML Академии -->
         <section class="author">
+          <h2 class="visually-hidden">Автор сайта</h2>
           <a class="author-link" href="https://htmlacademy.ru/">
             <svg class="author-icon" xmlns="http://www.w3.org/2000/svg" width="115" height="34" fill="none"
               viewBox="0 0 115 34">
@@ -237,14 +241,15 @@
   <!-- Модальное окно поиска гостиниц -->
   <div class="modal-container modal-container-close">
     <div class="modal modal-search">
-      <button class="modal-close-button">
+      <button class="modal-close-button" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
       <section class="modal-content">
-        <h2 class="modal-title">Поиск гостиниц в Седоне</h2>
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <!-- Обертка для ввода даты заезда с коментарием -->
           <section class="field-group">
+            <h3 class="visually-hidden">Строка ввода даты заезда</h3>
             <label class="modal-point-title check-in" for="check-in">Дата Заезда:</label>
             <div class="wrapper-check-in">
               <input class="field" type="text" id="check-in" name="check-in" placeholder="Укажите дату"
@@ -261,6 +266,7 @@
           </section>
           <!-- Обертка для ввода даты выезда с коментарием -->
           <section class="field-group">
+            <h3 class="visually-hidden">Строка ввода даты выезда</h3>
             <label class="modal-point-title check-out" for="check-out">Дата Выезда:</label>
             <div class="wrapper-check-out">
               <input class="field" type="text" id="check-out" name="check-out" placeholder="Укажите дату"
@@ -277,6 +283,7 @@
           </section>
           <!-- Обертка ввода количества взрослых и детей -->
           <section class="field-group how-many-visitors">
+            <h3 class="visually-hidden">Строка ввода количества гостей</h3>
             <label class="modal-point-title guests-adults" for="guests-adults">Взрослые:</label>
             <div class="wrapper-guest-adults">
               <button class="button-minus" type="button">
