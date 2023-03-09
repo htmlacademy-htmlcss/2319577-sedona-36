@@ -35,11 +35,6 @@ body {
   min-height: 100%;
 }
 
-img {
-  max-width: 100%;
-  object-fit: contain;
-}
-
 /* Убирает скрытый текст */
 .visually-hidden {
   position: absolute;
@@ -309,6 +304,15 @@ img {
   padding: 0;
 }
 
+/* Блок заголовка и описания преимуществ и сервиса */
+.block-content {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  padding: 20px 0 20px 0;
+  margin: 0 auto;
+}
+
 /* Список */
 .advantages-item,
 .services-item,
@@ -325,21 +329,6 @@ img {
   margin-bottom: 62px;
 }
 
-/* Псевдоэлемент после заголовка преимуществ */
-.advantages-description::before {
-  position: absolute;
-  left: 85px;
-  top: 86px;
-  width: 60px;
-  height: 2px;
-  background-color: rgba(0, 0, 0, 0.3);
-  content: "";
-}
-
-.advantages-description.special::before {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
 /* Текст описания */
 .advantages-description-section,
 .services-description-section,
@@ -354,12 +343,28 @@ img {
 
 .advantages-description,
 .services-description {
+  position: relative;
   color: #333333;
   margin: 0;
 }
 
 .special {
   color: #ffffff;
+}
+
+/* Псевдоэлемент после заголовка преимуществ */
+.advantages-description::before {
+  position: absolute;
+  left: 85px;
+  top: -32px;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  content: "";
+}
+
+.advantages-description.special::before {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Ширина и высота блоков преимуществ*/
@@ -371,15 +376,6 @@ img {
   align-items: center;
   width: 400px;
   min-height: 385px;
-}
-
-/* Блок сервиса */
-.block-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 230px;
-  margin: 0 auto;
 }
 
 /* Векторная картинка в блоке сервиса */
@@ -899,7 +895,7 @@ img {
   font-size: 18px;
   line-height: 24px;
   text-align: left;
-  width: auto;
+  width: 143px;
   padding: 10px 20px;
   padding-right: 40px;
   background-color: #F2F2F2;
@@ -969,6 +965,7 @@ img {
 .range-bar {
   position: absolute;
   top: -4px;
+  width: 226px;
   height: 0;
   border-top: 4px solid #FFFFFF;
 }
@@ -1186,6 +1183,7 @@ img {
 .hotel-card {
   display: grid;
   padding: 20px;
+  padding-top: 18px;
   grid-template-columns: 140px 20px 140px;
   grid-template-rows: min-content min-content min-content min-content;
   row-gap: 16px;
@@ -1197,8 +1195,7 @@ img {
 /* Т.к. заголовок внутри ссылки, он считается одним элементом с картинкой для грида */
 .hotel-card-image {
   display: block;
-  object-fit: fill;
-  margin-top: -2px;
+  object-fit: cover;
   margin-bottom: 16px;
 }
 
